@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type='text/xsl' href='puzzles.xsl'?><puzzles>
+<puzzle>
+<ticket>3</ticket>
+<file>src/site/resources/rqdql.xsd</file>
+<prefix>        </prefix>
+<body>The document is not yet ready! This is just a draft that has to be finished.</body>
+<estimate>0</estimate>
+<lines>46-47</lines>
+<owner>someone</owner>
+</puzzle>
+</puzzles>
