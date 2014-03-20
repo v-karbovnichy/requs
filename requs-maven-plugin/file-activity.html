@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--
+ * Copyright (c) 2012-2013, JCabi.com
+ * All rights reserved.
+ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>requs-maven-plugin - File Activity Report</title>
+        <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
+                                                                                                                        
+<link rel="shortcut icon" href="http://img.requs.org/favicon.gif"/>
+                                            <link rel="stylesheet" href="./css/highlight.css" />
+        <script src="./js/jquery-1.8.3.min.js"></script>
+        <script src="./js/highlight-7.3.min.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+        <link href="./css/jcabi.css" rel="stylesheet"/>
+        <script>
+            $(document).ready(
+                function() {
+                    $('div.source pre').each(
+                        function (idx, element) {
+                            hljs.highlightBlock(element);
+                        }
+                    );
+                    $(".menu-button").click(
+                        function() {
+                            if ($("#here-goes-menu").attr("class") == "menu-off") {
+                                $("#menu").clone().attr("class", "mobile-menu").appendTo("#here-goes-menu");
+                                $("#here-goes-menu").attr("class", "menu-on");
+                            } else {
+                                $(".mobile-menu").hide();
+                                $("#here-goes-menu").attr("class", "menu-off");
+                            }
+                        }
+                    );
+                }
+            );
+        </script>
+    </head>
+    <body>
+                <div class="page">
+            <div class="menu-section">
+                <ul id="menu">
+                                                                                    <li>
+                            Parent Project
+                                                            <ul>
+                                                                                                    <li>
+                                                                                    <a href="../index.html" title="requs">requs</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                        </ul>
+                                                    </li>
+                                            <li>
+                            Overview
+                                                            <ul>
+                                                                                                    <li>
+                                                                                    <a href="index.html" title="Introduction">Introduction</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="usage.html" title="Usage">Usage</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="plugin-info.html" title="Goals">Goals</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="apidocs-2.0-SNAPSHOT/index.html" title="JavaDoc 2.0-SNAPSHOT">JavaDoc 2.0-SNAPSHOT</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="cobertura/index.html" title="Test Coverage">Test Coverage</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                        </ul>
+                                                    </li>
+                                            <li>
+                            Project Documentation
+                                                            <ul>
+                                                                                                    <li>
+                                                                                    <a href="project-info.html" title="Project Information">Project Information</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </li>
+                                                                                                                        <li>
+                                                                                    <a href="project-reports.html" title="Project Reports">Project Reports</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <ul>
+                                                                                                    <li>
+                                                                                    <a href="rempl.html" title="REMPL">REMPL</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="surefire-report.html" title="Surefire Report">Surefire Report</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="changelog.html" title="Change Log">Change Log</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="dev-activity.html" title="Developer Activity">Developer Activity</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                            <strong>                        <a href="file-activity.html" title="File Activity">File Activity</a>
+        </strong>
+                                                                                                                                                                <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="dependency-updates-report.html" title="Dependency Updates Report">Dependency Updates Report</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="plugin-updates-report.html" title="Plugin Updates Report">Plugin Updates Report</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="apidocs-2.0-SNAPSHOT/index.html" title="JavaDocs">JavaDocs</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="cobertura/index.html" title="Cobertura Test Coverage">Cobertura Test Coverage</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="plugin-info.html" title="Plugin Documentation">Plugin Documentation</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="github-report.html" title="GitHub Report">GitHub Report</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                        </ul>
+                                                    </li>
+                                                                                        </ul>
+                                                    </li>
+                                    </ul>
+            </div>
+            <div id="right-side">
+                <div id="content">
+                    <i class="menu-button fa fa-align-justify"></i>
+                    <div class="logo-section">
+                        <a href=".." title="${decoration.bannerLeft.title}">
+                            <img src="http://img.requs.org/logo.png"
+                                alt="requs"
+                                                                    width="64"
+                                                                                                    height="64"
+                                                            />
+                        </a>
+                    </div>
+                    <div class="date">
+                        <div class="date-numbers">
+                            <strong>2.0-SNAPSHOT</strong>
+                            
+                            20-Mar-2014
+                        </div>
+                                                                    </div>
+                    <div id="here-goes-menu" class="menu-off"></div>
+                    <article>
+                        <div class="section">
+                            <div class="section">
+<h2>File Activity Report<a name="File_Activity_Report"></a></h2>
+<div class="section">
+<h3>Changes between 2014-02-18 and 2014-03-21<a name="Changes_between_2014-02-18_and_2014-03-21"></a></h3>
+<p>Total commits: 11<br />Total number of files changed: 25</p>
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Filename</th>
+<th>Number of Times Changed</th></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/pom.xml">requs-maven-plugin/<b>pom.xml</b></a> </td>
+<td>8</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/main/java/org/requs/maven/CompileMojo.java">requs-maven-plugin/src/main/java/org/requs/maven/<b>CompileMojo.java</b></a> </td>
+<td>6</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/main/java/org/requs/maven/ReportMojo.java">requs-maven-plugin/src/main/java/org/requs/maven/<b>ReportMojo.java</b></a> </td>
+<td>6</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/main/java/org/requs/maven/Output.java">requs-maven-plugin/src/main/java/org/requs/maven/<b>Output.java</b></a> </td>
+<td>5</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/site/apt/usage.apt.vm">requs-maven-plugin/src/site/apt/<b>usage.apt.vm</b></a> </td>
+<td>5</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/main/java/org/requs/maven/package-info.java">requs-maven-plugin/src/main/java/org/requs/maven/<b>package-info.java</b></a> </td>
+<td>4</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/test/java/org/requs/maven/CompileMojoTest.java">requs-maven-plugin/src/test/java/org/requs/maven/<b>CompileMojoTest.java</b></a> </td>
+<td>4</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/test/java/org/requs/maven/ReportMojoTest.java">requs-maven-plugin/src/test/java/org/requs/maven/<b>ReportMojoTest.java</b></a> </td>
+<td>4</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/test/java/org/requs/maven/package-info.java">requs-maven-plugin/src/test/java/org/requs/maven/<b>package-info.java</b></a> </td>
+<td>4</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/LICENSE.txt">requs-maven-plugin/<b>LICENSE.txt</b></a> </td>
+<td>3</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/it/report-in-site/pom.xml">requs-maven-plugin/src/it/report-in-site/<b>pom.xml</b></a> </td>
+<td>3</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/it/report-in-site/verify.groovy">requs-maven-plugin/src/it/report-in-site/<b>verify.groovy</b></a> </td>
+<td>3</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/it/simple-read/pom.xml">requs-maven-plugin/src/it/simple-read/<b>pom.xml</b></a> </td>
+<td>3</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/it/simple-read/verify.groovy">requs-maven-plugin/src/it/simple-read/<b>verify.groovy</b></a> </td>
+<td>3</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/site/apt/index.apt.vm">requs-maven-plugin/src/site/apt/<b>index.apt.vm</b></a> </td>
+<td>3</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/site/site.xml">requs-maven-plugin/src/site/<b>site.xml</b></a> </td>
+<td>3</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/it/settings.xml">requs-maven-plugin/src/it/<b>settings.xml</b></a> </td>
+<td>2</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/it/simple-read/invoker.properties">requs-maven-plugin/src/it/simple-read/<b>invoker.properties</b></a> </td>
+<td>2</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/main/resources/org/requs/maven/srs.xsl">requs-maven-plugin/src/main/resources/org/requs/maven/<b>srs.xsl</b></a> </td>
+<td>2</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/main/resources/srs.xsl">requs-maven-plugin/src/main/resources/<b>srs.xsl</b></a> </td>
+<td>2</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/it/report-in-site/src/main/requs/input.req">requs-maven-plugin/src/it/report-in-site/src/main/requs/<b>input.req</b></a> </td>
+<td>1</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/it/simple-read/src/main/requs/input.req">requs-maven-plugin/src/it/simple-read/src/main/requs/<b>input.req</b></a> </td>
+<td>1</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/it/report-in-site/invoker.properties">requs-maven-plugin/src/it/report-in-site/<b>invoker.properties</b></a> </td>
+<td>1</td></tr>
+<tr class="a">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/main/aspect/README.txt">requs-maven-plugin/src/main/aspect/<b>README.txt</b></a> </td>
+<td>1</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-maven-plugin/src/site/fml/faq.fml">requs-maven-plugin/src/site/fml/<b>faq.fml</b></a> </td>
+<td>1</td></tr></table></div></div>
+                        </div>
+                    </article>
+                    <img class="maven-mobile" src="./images/built-by-maven.png"
+                        alt="built by maven" style="float:right" width="80"/>
+                </div>
+                <div class="legal-notes">
+                    <div class="copyright">
+                        Copyright &#169;
+                                                                            2009-2014
+                                                <br/>
+                        requs.org, All Rights Reserved.
+                        <br/>
+                        <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
