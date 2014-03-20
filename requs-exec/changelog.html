@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--
+ * Copyright (c) 2012-2013, JCabi.com
+ * All rights reserved.
+ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>requs-exec - Change Log Report</title>
+        <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
+                                                                                                                        
+<link rel="shortcut icon" href="http://img.requs.org/favicon.gif"/>
+                                            <link rel="stylesheet" href="./css/highlight.css" />
+        <script src="./js/jquery-1.8.3.min.js"></script>
+        <script src="./js/highlight-7.3.min.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+        <link href="./css/jcabi.css" rel="stylesheet"/>
+        <script>
+            $(document).ready(
+                function() {
+                    $('div.source pre').each(
+                        function (idx, element) {
+                            hljs.highlightBlock(element);
+                        }
+                    );
+                    $(".menu-button").click(
+                        function() {
+                            if ($("#here-goes-menu").attr("class") == "menu-off") {
+                                $("#menu").clone().attr("class", "mobile-menu").appendTo("#here-goes-menu");
+                                $("#here-goes-menu").attr("class", "menu-on");
+                            } else {
+                                $(".mobile-menu").hide();
+                                $("#here-goes-menu").attr("class", "menu-off");
+                            }
+                        }
+                    );
+                }
+            );
+        </script>
+    </head>
+    <body>
+                <div class="page">
+            <div class="menu-section">
+                <ul id="menu">
+                                                                                    <li>
+                            Parent Project
+                                                            <ul>
+                                                                                                    <li>
+                                                                                    <a href="../index.html" title="requs">requs</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                        </ul>
+                                                    </li>
+                                            <li>
+                            Overview
+                                                            <ul>
+                                                                                                    <li>
+                                                                                    <a href="index.html" title="Introduction">Introduction</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="apidocs-2.0-SNAPSHOT/index.html" title="JavaDoc 2.0-SNAPSHOT">JavaDoc 2.0-SNAPSHOT</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="cobertura/index.html" title="Test Coverage">Test Coverage</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                        </ul>
+                                                    </li>
+                                            <li>
+                            Project Documentation
+                                                            <ul>
+                                                                                                    <li>
+                                                                                    <a href="project-info.html" title="Project Information">Project Information</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </li>
+                                                                                                                        <li>
+                                                                                    <a href="project-reports.html" title="Project Reports">Project Reports</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <ul>
+                                                                                                    <li>
+                                                                                    <a href="rempl.html" title="REMPL">REMPL</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="surefire-report.html" title="Surefire Report">Surefire Report</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                            <strong>                        <a href="changelog.html" title="Change Log">Change Log</a>
+        </strong>
+                                                                                                                                                                <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="dev-activity.html" title="Developer Activity">Developer Activity</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="file-activity.html" title="File Activity">File Activity</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="dependency-updates-report.html" title="Dependency Updates Report">Dependency Updates Report</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="plugin-updates-report.html" title="Plugin Updates Report">Plugin Updates Report</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="apidocs-2.0-SNAPSHOT/index.html" title="JavaDocs">JavaDocs</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="cobertura/index.html" title="Cobertura Test Coverage">Cobertura Test Coverage</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                                                        <li>
+                                                                                    <a href="github-report.html" title="GitHub Report">GitHub Report</a>
+                                                                                                                                                                        <ul>
+                                                                    </ul>
+                                                    </li>
+                                                                                        </ul>
+                                                    </li>
+                                                                                        </ul>
+                                                    </li>
+                                    </ul>
+            </div>
+            <div id="right-side">
+                <div id="content">
+                    <i class="menu-button fa fa-align-justify"></i>
+                    <div class="logo-section">
+                        <a href=".." title="${decoration.bannerLeft.title}">
+                            <img src="http://img.requs.org/logo.png"
+                                alt="requs"
+                                                                    width="64"
+                                                                                                    height="64"
+                                                            />
+                        </a>
+                    </div>
+                    <div class="date">
+                        <div class="date-numbers">
+                            <strong>2.0-SNAPSHOT</strong>
+                            
+                            20-Mar-2014
+                        </div>
+                                                                    </div>
+                    <div id="here-goes-menu" class="menu-off"></div>
+                    <article>
+                        <div class="section">
+                            <div class="section">
+<h2>Change Log Report<a name="Change_Log_Report"></a></h2>
+<p>Total number of changed sets: 1</p>
+<div class="section">
+<h3>Changes between 2014-02-18 and 2014-03-21<a name="Changes_between_2014-02-18_and_2014-03-21"></a></h3>
+<p>Total commits: 8<br />Total number of files changed: 27</p>
+<table border="0" class="bodyTable">
+<tr class="a">
+<th>Timestamp</th>
+<th>Author</th>
+<th>Details</th></tr>
+<tr class="b">
+<td>2014-03-20 21:10:31</td>
+<td>Yegor Bugayenko &lt;yegor@tpc2.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml">requs-exec/<b>pom.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml?rev=6cb73a477eebd5df61dbc0f21c61a0a03cc1970d&amp;content-type=text/vnd.viewcvs-markup">v 6cb73a477eebd5df61dbc0f21c61a0a03cc1970d</a><br /><br />gh-pages config</td></tr>
+<tr class="a">
+<td>2014-03-20 21:09:19</td>
+<td>Yegor Bugayenko &lt;yegor@tpc2.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/apt/index.apt.vm">requs-exec/src/site/apt/<b>index.apt.vm</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/apt/index.apt.vm?rev=4be30a4d78a7dd4e9b823c9f5b08c1ecdda66e51&amp;content-type=text/vnd.viewcvs-markup">v 4be30a4d78a7dd4e9b823c9f5b08c1ecdda66e51</a><br /><br />site pages</td></tr>
+<tr class="b">
+<td>2014-03-20 21:05:42</td>
+<td>Yegor Bugayenko &lt;yegor@tpc2.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/apt/index.apt.vm">requs-exec/src/site/apt/<b>index.apt.vm</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/apt/index.apt.vm?rev=9e4b0f5400db2a85423e24dd31685107fd96dc41&amp;content-type=text/vnd.viewcvs-markup">v 9e4b0f5400db2a85423e24dd31685107fd96dc41</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/site.xml">requs-exec/src/site/<b>site.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/site.xml?rev=9e4b0f5400db2a85423e24dd31685107fd96dc41&amp;content-type=text/vnd.viewcvs-markup">v 9e4b0f5400db2a85423e24dd31685107fd96dc41</a><br /><br />site pages</td></tr>
+<tr class="a">
+<td>2014-03-20 17:26:06</td>
+<td>Yegor Bugayenko &lt;yegor@tpc2.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Compiler.java">requs-exec/src/main/java/org/requs/exec/<b>Compiler.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Compiler.java?rev=ad307326f0ad48103956626e75d4093f06923645&amp;content-type=text/vnd.viewcvs-markup">v ad307326f0ad48103956626e75d4093f06923645</a><br /><br />#16 maven plugin is clean</td></tr>
+<tr class="b">
+<td>2014-03-20 16:59:23</td>
+<td>Yegor Bugayenko &lt;yegor@tpc2.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/LICENSE.txt">requs-exec/<b>LICENSE.txt</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/LICENSE.txt?rev=5484953747f1991b85dfda85c2a13ef8d08c7ede&amp;content-type=text/vnd.viewcvs-markup">v 5484953747f1991b85dfda85c2a13ef8d08c7ede</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml">requs-exec/<b>pom.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml?rev=5484953747f1991b85dfda85c2a13ef8d08c7ede&amp;content-type=text/vnd.viewcvs-markup">v 5484953747f1991b85dfda85c2a13ef8d08c7ede</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Compiler.java">requs-exec/src/main/java/org/requs/exec/<b>Compiler.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Compiler.java?rev=5484953747f1991b85dfda85c2a13ef8d08c7ede&amp;content-type=text/vnd.viewcvs-markup">v 5484953747f1991b85dfda85c2a13ef8d08c7ede</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Main.java">requs-exec/src/main/java/org/requs/exec/<b>Main.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Main.java?rev=5484953747f1991b85dfda85c2a13ef8d08c7ede&amp;content-type=text/vnd.viewcvs-markup">v 5484953747f1991b85dfda85c2a13ef8d08c7ede</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/MainTest.java">requs-exec/src/test/java/org/requs/exec/<b>MainTest.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/MainTest.java?rev=5484953747f1991b85dfda85c2a13ef8d08c7ede&amp;content-type=text/vnd.viewcvs-markup">v 5484953747f1991b85dfda85c2a13ef8d08c7ede</a><br /><br />#16 requs-exec is polished</td></tr>
+<tr class="a">
+<td>2014-03-20 16:43:37</td>
+<td>Yegor Bugayenko &lt;yegor@tpc2.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml">requs-exec/<b>pom.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/input.req">requs-exec/src/it/compiles-simple-syntax/<b>input.req</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/input.req?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/pom.xml">requs-exec/src/it/compiles-simple-syntax/<b>pom.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/pom.xml?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/requs-src/input.req">requs-exec/src/it/compiles-simple-syntax/requs-src/<b>input.req</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/requs-src/input.req?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/verify.groovy">requs-exec/src/it/compiles-simple-syntax/<b>verify.groovy</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/verify.groovy?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Compiler.java">requs-exec/src/main/java/org/requs/exec/<b>Compiler.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Compiler.java?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Main.java">requs-exec/src/main/java/org/requs/exec/<b>Main.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Main.java?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/resources/org/requs/exec/srs.xsl">requs-exec/src/main/resources/org/requs/exec/<b>srs.xsl</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/resources/org/requs/exec/srs.xsl?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/CompilerTest.java">requs-exec/src/test/java/org/requs/exec/<b>CompilerTest.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/CompilerTest.java?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/MainTest.java">requs-exec/src/test/java/org/requs/exec/<b>MainTest.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/MainTest.java?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/resources/META-INF/MANIFEST.MF">requs-exec/src/test/resources/META-INF/<b>MANIFEST.MF</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/resources/META-INF/MANIFEST.MF?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/resources/log4j.properties">requs-exec/src/test/resources/<b>log4j.properties</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/resources/log4j.properties?rev=b6116f706fca840c9e8be360668f743df0de2e87&amp;content-type=text/vnd.viewcvs-markup">v b6116f706fca840c9e8be360668f743df0de2e87</a><br /><br />#16 requs-exec is clean</td></tr>
+<tr class="b">
+<td>2014-03-20 13:48:40</td>
+<td>Yegor Bugayenko &lt;yegor@tpc2.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml">requs-exec/<b>pom.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/input.req">requs-exec/src/it/compiles-simple-syntax/<b>input.req</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/input.req?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/input.rqdql">requs-exec/src/it/compiles-simple-syntax/<b>input.rqdql</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/input.rqdql?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/pom.xml">requs-exec/src/it/compiles-simple-syntax/<b>pom.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/pom.xml?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/verify.groovy">requs-exec/src/it/compiles-simple-syntax/<b>verify.groovy</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/verify.groovy?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/cli/Main.java">requs-exec/src/main/java/org/requs/cli/<b>Main.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/cli/Main.java?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/cli/package-info.java">requs-exec/src/main/java/org/requs/cli/<b>package-info.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/cli/package-info.java?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Main.java">requs-exec/src/main/java/org/requs/exec/<b>Main.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/Main.java?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/package-info.java">requs-exec/src/main/java/org/requs/exec/<b>package-info.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/exec/package-info.java?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/cli/MainTest.java">requs-exec/src/test/java/org/requs/cli/<b>MainTest.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/cli/MainTest.java?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/cli/package-info.java">requs-exec/src/test/java/org/requs/cli/<b>package-info.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/cli/package-info.java?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/MainTest.java">requs-exec/src/test/java/org/requs/exec/<b>MainTest.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/MainTest.java?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/package-info.java">requs-exec/src/test/java/org/requs/exec/<b>package-info.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/exec/package-info.java?rev=1f6dc09ce46370284f20e7f7efacfcf409d21ff9&amp;content-type=text/vnd.viewcvs-markup">v 1f6dc09ce46370284f20e7f7efacfcf409d21ff9</a><br /><br />#16 requs-exec</td></tr>
+<tr class="a">
+<td>2014-03-20 13:41:28</td>
+<td>Yegor Bugayenko &lt;yegor@tpc2.com&gt;</td>
+<td><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/LICENSE.txt">requs-exec/<b>LICENSE.txt</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/LICENSE.txt?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml">requs-exec/<b>pom.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/pom.xml?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/input.rqdql">requs-exec/src/it/compiles-simple-syntax/<b>input.rqdql</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/input.rqdql?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/invoker.properties">requs-exec/src/it/compiles-simple-syntax/<b>invoker.properties</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/invoker.properties?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/pom.xml">requs-exec/src/it/compiles-simple-syntax/<b>pom.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/pom.xml?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/verify.groovy">requs-exec/src/it/compiles-simple-syntax/<b>verify.groovy</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/compiles-simple-syntax/verify.groovy?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/settings.xml">requs-exec/src/it/<b>settings.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/it/settings.xml?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/aspect/README.txt">requs-exec/src/main/aspect/<b>README.txt</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/aspect/README.txt?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/assembly/bin.xml">requs-exec/src/main/assembly/<b>bin.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/assembly/bin.xml?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/cli/Main.java">requs-exec/src/main/java/org/requs/cli/<b>Main.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/cli/Main.java?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/cli/package-info.java">requs-exec/src/main/java/org/requs/cli/<b>package-info.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/java/org/requs/cli/package-info.java?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/resources/log4j.properties">requs-exec/src/main/resources/<b>log4j.properties</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/main/resources/log4j.properties?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/apt/index.apt.vm">requs-exec/src/site/apt/<b>index.apt.vm</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/apt/index.apt.vm?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/site.xml">requs-exec/src/site/<b>site.xml</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/site/site.xml?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/cli/MainTest.java">requs-exec/src/test/java/org/requs/cli/<b>MainTest.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/cli/MainTest.java?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/cli/package-info.java">requs-exec/src/test/java/org/requs/cli/<b>package-info.java</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/java/org/requs/cli/package-info.java?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/resources/META-INF/MANIFEST.MF">requs-exec/src/test/resources/META-INF/<b>MANIFEST.MF</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/resources/META-INF/MANIFEST.MF?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/resources/log4j.properties">requs-exec/src/test/resources/<b>log4j.properties</b></a> <a class="externalLink" href="https://github.com/tpc2/requs/requs-exec/src/test/resources/log4j.properties?rev=a917a5d95ab36008449c436cc7a1bab14f575abd&amp;content-type=text/vnd.viewcvs-markup">v a917a5d95ab36008449c436cc7a1bab14f575abd</a><br /><br />#16 year changed, requs-cli renamed to requs-exec</td></tr></table></div></div>
+                        </div>
+                    </article>
+                    <img class="maven-mobile" src="./images/built-by-maven.png"
+                        alt="built by maven" style="float:right" width="80"/>
+                </div>
+                <div class="legal-notes">
+                    <div class="copyright">
+                        Copyright &#169;
+                                                                            2009-2014
+                                                <br/>
+                        requs.org, All Rights Reserved.
+                        <br/>
+                        <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
