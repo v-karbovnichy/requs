@@ -69,7 +69,7 @@
 <a class="jxr_linenumber" name="L61" href="#L61">61</a>      <strong class="jxr_keyword">public</strong> String post(@FormParam(<span class="jxr_string">"text"</span>) <strong class="jxr_keyword">final</strong> String text) {
 <a class="jxr_linenumber" name="L62" href="#L62">62</a>          String xml;
 <a class="jxr_linenumber" name="L63" href="#L63">63</a>          <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="L64" href="#L64">64</a>              xml = <strong class="jxr_keyword">new</strong> <a href="../../../org/requs/Spec.html">Spec</a>(text).xml().toString();
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>              xml = <strong class="jxr_keyword">new</strong> Spec.Ultimate(text).xml().toString();
 <a class="jxr_linenumber" name="L65" href="#L65">65</a>          } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> IllegalArgumentException ex) {
 <a class="jxr_linenumber" name="L66" href="#L66">66</a>              xml = Logger.format(<span class="jxr_string">"%[exception]s"</span>, ex);
 <a class="jxr_linenumber" name="L67" href="#L67">67</a>          }
