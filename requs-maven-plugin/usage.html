@@ -74,7 +74,7 @@
                                                                     </ul>
                                                     </li>
                                                                                                                         <li>
-                                                                                    <a href="apidocs-2.0-SNAPSHOT/index.html" title="JavaDoc 2.0-SNAPSHOT">JavaDoc 2.0-SNAPSHOT</a>
+                                                                                    <a href="apidocs-1.1/index.html" title="JavaDoc 1.1">JavaDoc 1.1</a>
                                                                                                                                                                         <ul>
                                                                     </ul>
                                                     </li>
@@ -103,7 +103,7 @@
                     <i class="menu-button fa fa-align-justify"></i>
                     <div class="logo-section">
                         <a href=".." title="${decoration.bannerLeft.title}">
-                            <img src="http://img.requs.org/logo.png"
+                            <img src="http://img.requs.org/logo-.png"
                                 alt="requs"
                                                                     width="64"
                                                                                                     height="64"
@@ -112,16 +112,16 @@
                     </div>
                     <div class="date">
                         <div class="date-numbers">
-                            <strong>2.0-SNAPSHOT</strong>
+                            <strong>1.1</strong>
                             
-                            20-Mar-2014
+                            25-Mar-2014
                         </div>
                                                                     </div>
                     <div id="here-goes-menu" class="menu-off"></div>
                     <article>
                         <div class="section">
                             <!-- ~~ Copyright (c) 2011-2014, REMPL.com --><!-- All rights reserved. --><!--  --><!-- Redistribution and use in source and binary forms, with or without --><!-- modification, are permitted provided that the following conditions --><!-- are met: --><!--  --><!-- 1) Redistributions of source code must retain the above copyright --><!-- notice, this list of conditions and the following disclaimer. --><!-- 2) Redistributions in binary form must reproduce the above --><!-- copyright notice, this list of conditions and the following --><!-- disclaimer in the documentation and/or other materials provided --><!-- with the distribution. --><!-- 3) Neither the name of the REMPL.com nor the names of its --><!-- contributors may be used to endorse or promote products derived --><!-- from this software without specific prior written permission. --><!--  --><!-- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS --><!-- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT --><!-- NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND --><!-- FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL --><!-- THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, --><!-- INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES --><!-- (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR --><!-- SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) --><!-- HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, --><!-- STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) --><!-- ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED --><!-- OF THE POSSIBILITY OF SUCH DAMAGE. --><!--  --><!-- @version $Id$ --><!--  --><div class="section">
-<h2>Usage<a name="Usage"></a></h2>
+<h2>Usage with Maven 3+<a name="Usage_with_Maven_3"></a></h2>
 <p>Add the following to your <tt>pom.xml</tt>:</p>
 <div class="source">
 <pre>[...]
@@ -132,11 +132,11 @@
     &lt;plugin&gt;
       &lt;artifactId&gt;org.requs&lt;/artifactId&gt;
       &lt;groupId&gt;requs-maven-plugin&lt;/groupId&gt;
-      &lt;version&gt;2.0-SNAPSHOT&lt;/version&gt;
+      &lt;version&gt;1.1&lt;/version&gt;
     &lt;/plugin&gt;
   &lt;/plugins&gt;
 &lt;/build&gt;</pre></div>
-<p>Running <tt>mvn requs:compile</tt> will create a summary report <tt>requs.xml</tt> in <tt>$<a name="project.build.directory">project.build.directory</a></tt>.</p>
+<p>Running <tt>mvn requs:compile</tt> will create compile reports in project build directory, inside <tt>requs</tt> sub-directory.</p>
 <p>Add the following to your <tt>pom.xml</tt> (Maven 3.0+):</p>
 <div class="source">
 <pre>[...]
@@ -151,14 +151,14 @@
           &lt;plugin&gt;
             &lt;groupId&gt;org.requs&lt;/groupId&gt;
             &lt;artifactId&gt;requs-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;2.0-SNAPSHOT&lt;/version&gt;
+            &lt;version&gt;1.1&lt;/version&gt;
           &lt;/plugin&gt;
         &lt;/reportPlugins&gt;
       &lt;/configuration&gt;
     &lt;/plugin&gt;
   &lt;/plugins&gt;
 &lt;/build&gt;</pre></div>
-<p>Running <tt>mvn site</tt> will create a summary report in <tt>target/site</tt>.</p></div>
+<p>Running <tt>mvn site</tt> will create a summary report in <tt>target/site/requs</tt>.</p></div>
                         </div>
                     </article>
                     <img class="maven-mobile" src="./images/built-by-maven.png"
