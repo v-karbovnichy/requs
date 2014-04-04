@@ -38,10 +38,10 @@
 <a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">package</strong> org.requs.maven;
 <a class="jxr_linenumber" name="L31" href="#L31">31</a>  
 <a class="jxr_linenumber" name="L32" href="#L32">32</a>  <strong class="jxr_keyword">import</strong> com.jcabi.log.Logger;
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">import</strong> java.io.File;
-<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
-<a class="jxr_linenumber" name="L35" href="#L35">35</a>  <strong class="jxr_keyword">import</strong> java.util.Collection;
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <strong class="jxr_keyword">import</strong> java.util.Collections;
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">import</strong> com.jcabi.xml.XML;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <strong class="jxr_keyword">import</strong> com.jcabi.xml.XMLDocument;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  <strong class="jxr_keyword">import</strong> java.io.File;
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
 <a class="jxr_linenumber" name="L37" href="#L37">37</a>  <strong class="jxr_keyword">import</strong> java.util.Locale;
 <a class="jxr_linenumber" name="L38" href="#L38">38</a>  <strong class="jxr_keyword">import</strong> javax.validation.constraints.NotNull;
 <a class="jxr_linenumber" name="L39" href="#L39">39</a>  <strong class="jxr_keyword">import</strong> lombok.EqualsAndHashCode;
@@ -55,7 +55,7 @@
 <a class="jxr_linenumber" name="L47" href="#L47">47</a>  <strong class="jxr_keyword">import</strong> org.apache.maven.project.MavenProject;
 <a class="jxr_linenumber" name="L48" href="#L48">48</a>  <strong class="jxr_keyword">import</strong> org.apache.maven.reporting.AbstractMavenReport;
 <a class="jxr_linenumber" name="L49" href="#L49">49</a>  <strong class="jxr_keyword">import</strong> org.apache.maven.reporting.MavenReportException;
-<a class="jxr_linenumber" name="L50" href="#L50">50</a>  <strong class="jxr_keyword">import</strong> org.requs.exec.Compiler;
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  <strong class="jxr_keyword">import</strong> org.requs.Compiler;
 <a class="jxr_linenumber" name="L51" href="#L51">51</a>  <strong class="jxr_keyword">import</strong> org.slf4j.impl.StaticLoggerBinder;
 <a class="jxr_linenumber" name="L52" href="#L52">52</a>  
 <a class="jxr_linenumber" name="L53" href="#L53">53</a>  <em class="jxr_javadoccomment">/**</em>
@@ -115,21 +115,21 @@
 <a class="jxr_linenumber" name="L107" href="#L107">107</a> 
 <a class="jxr_linenumber" name="L108" href="#L108">108</a>     @Override
 <a class="jxr_linenumber" name="L109" href="#L109">109</a>     <strong class="jxr_keyword">public</strong> String getDescription(<strong class="jxr_keyword">final</strong> Locale locale) {
-<a class="jxr_linenumber" name="L110" href="#L110">110</a>         <strong class="jxr_keyword">return</strong> <span class="jxr_string">"Requs Spec"</span>;
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         <strong class="jxr_keyword">return</strong> <span class="jxr_string">"Requs Facet"</span>;
 <a class="jxr_linenumber" name="L111" href="#L111">111</a>     }
 <a class="jxr_linenumber" name="L112" href="#L112">112</a> 
 <a class="jxr_linenumber" name="L113" href="#L113">113</a>     @Override
-<a class="jxr_linenumber" name="L114" href="#L114">114</a>     <strong class="jxr_keyword">protected</strong> Renderer getSiteRenderer() {
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>     <strong class="jxr_keyword">public</strong> Renderer getSiteRenderer() {
 <a class="jxr_linenumber" name="L115" href="#L115">115</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.renderer;
 <a class="jxr_linenumber" name="L116" href="#L116">116</a>     }
 <a class="jxr_linenumber" name="L117" href="#L117">117</a> 
 <a class="jxr_linenumber" name="L118" href="#L118">118</a>     @Override
-<a class="jxr_linenumber" name="L119" href="#L119">119</a>     <strong class="jxr_keyword">protected</strong> String getOutputDirectory() {
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>     <strong class="jxr_keyword">public</strong> String getOutputDirectory() {
 <a class="jxr_linenumber" name="L120" href="#L120">120</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.output.getAbsolutePath();
 <a class="jxr_linenumber" name="L121" href="#L121">121</a>     }
 <a class="jxr_linenumber" name="L122" href="#L122">122</a> 
 <a class="jxr_linenumber" name="L123" href="#L123">123</a>     @Override
-<a class="jxr_linenumber" name="L124" href="#L124">124</a>     <strong class="jxr_keyword">protected</strong> MavenProject getProject() {
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>     <strong class="jxr_keyword">public</strong> MavenProject getProject() {
 <a class="jxr_linenumber" name="L125" href="#L125">125</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.project;
 <a class="jxr_linenumber" name="L126" href="#L126">126</a>     }
 <a class="jxr_linenumber" name="L127" href="#L127">127</a> 
@@ -152,57 +152,64 @@
 <a class="jxr_linenumber" name="L144" href="#L144">144</a>         }
 <a class="jxr_linenumber" name="L145" href="#L145">145</a>         snk.section1();
 <a class="jxr_linenumber" name="L146" href="#L146">146</a>         snk.sectionTitle1();
-<a class="jxr_linenumber" name="L147" href="#L147">147</a>         snk.text(<span class="jxr_string">"Requs Reports"</span>);
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         snk.text(<span class="jxr_string">"Requs Facets"</span>);
 <a class="jxr_linenumber" name="L148" href="#L148">148</a>         snk.sectionTitle1_();
 <a class="jxr_linenumber" name="L149" href="#L149">149</a>         snk.table();
 <a class="jxr_linenumber" name="L150" href="#L150">150</a>         snk.tableRow();
 <a class="jxr_linenumber" name="L151" href="#L151">151</a>         snk.tableHeaderCell();
-<a class="jxr_linenumber" name="L152" href="#L152">152</a>         snk.text(<span class="jxr_string">"Report"</span>);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>         snk.text(<span class="jxr_string">"Facet"</span>);
 <a class="jxr_linenumber" name="L153" href="#L153">153</a>         snk.tableHeaderCell_();
-<a class="jxr_linenumber" name="L154" href="#L154">154</a>         snk.tableRow_();
-<a class="jxr_linenumber" name="L155" href="#L155">155</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">final</strong> String report : <strong class="jxr_keyword">this</strong>.reports(home)) {
-<a class="jxr_linenumber" name="L156" href="#L156">156</a>             snk.tableRow();
-<a class="jxr_linenumber" name="L157" href="#L157">157</a>             snk.tableCell();
-<a class="jxr_linenumber" name="L158" href="#L158">158</a>             snk.link(
-<a class="jxr_linenumber" name="L159" href="#L159">159</a>                 String.format(
-<a class="jxr_linenumber" name="L160" href="#L160">160</a>                     <span class="jxr_string">"%s/%s.xml"</span>,
-<a class="jxr_linenumber" name="L161" href="#L161">161</a>                     <strong class="jxr_keyword">this</strong>.getOutputName(),
-<a class="jxr_linenumber" name="L162" href="#L162">162</a>                     report
-<a class="jxr_linenumber" name="L163" href="#L163">163</a>                 )
-<a class="jxr_linenumber" name="L164" href="#L164">164</a>             );
-<a class="jxr_linenumber" name="L165" href="#L165">165</a>             snk.text(report);
-<a class="jxr_linenumber" name="L166" href="#L166">166</a>             snk.link_();
-<a class="jxr_linenumber" name="L167" href="#L167">167</a>             snk.tableCell_();
-<a class="jxr_linenumber" name="L168" href="#L168">168</a>             snk.tableRow_();
-<a class="jxr_linenumber" name="L169" href="#L169">169</a>         }
-<a class="jxr_linenumber" name="L170" href="#L170">170</a>         snk.table_();
-<a class="jxr_linenumber" name="L171" href="#L171">171</a>         snk.paragraph();
-<a class="jxr_linenumber" name="L172" href="#L172">172</a>         snk.text(<span class="jxr_string">"More information you can get at "</span>);
-<a class="jxr_linenumber" name="L173" href="#L173">173</a>         snk.link(<span class="jxr_string">"http://www.requs.org"</span>);
-<a class="jxr_linenumber" name="L174" href="#L174">174</a>         snk.text(<span class="jxr_string">"www.requs.org"</span>);
-<a class="jxr_linenumber" name="L175" href="#L175">175</a>         snk.link_();
-<a class="jxr_linenumber" name="L176" href="#L176">176</a>         snk.text(<span class="jxr_string">"."</span>);
-<a class="jxr_linenumber" name="L177" href="#L177">177</a>         snk.paragraph_();
-<a class="jxr_linenumber" name="L178" href="#L178">178</a>         snk.section1_();
-<a class="jxr_linenumber" name="L179" href="#L179">179</a>     }
-<a class="jxr_linenumber" name="L180" href="#L180">180</a> 
-<a class="jxr_linenumber" name="L181" href="#L181">181</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L182" href="#L182">182</a> <em class="jxr_javadoccomment">     * All reports.</em>
-<a class="jxr_linenumber" name="L183" href="#L183">183</a> <em class="jxr_javadoccomment">     * @param dir Where to save them</em>
-<a class="jxr_linenumber" name="L184" href="#L184">184</a> <em class="jxr_javadoccomment">     * @return Names of reports</em>
-<a class="jxr_linenumber" name="L185" href="#L185">185</a> <em class="jxr_javadoccomment">     * @throws MavenReportException If fails</em>
-<a class="jxr_linenumber" name="L186" href="#L186">186</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="L187" href="#L187">187</a>     <strong class="jxr_keyword">private</strong> Collection&lt;String&gt; reports(<strong class="jxr_keyword">final</strong> File dir)
-<a class="jxr_linenumber" name="L188" href="#L188">188</a>         <strong class="jxr_keyword">throws</strong> MavenReportException {
-<a class="jxr_linenumber" name="L189" href="#L189">189</a>         <strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="L190" href="#L190">190</a>             <strong class="jxr_keyword">new</strong> <a href="../../../org/requs/exec/Compiler.html">Compiler</a>(<strong class="jxr_keyword">this</strong>.source, dir).compile();
-<a class="jxr_linenumber" name="L191" href="#L191">191</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> IOException ex) {
-<a class="jxr_linenumber" name="L192" href="#L192">192</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MavenReportException(<span class="jxr_string">"failed to compile"</span>, ex);
-<a class="jxr_linenumber" name="L193" href="#L193">193</a>         }
-<a class="jxr_linenumber" name="L194" href="#L194">194</a>         <strong class="jxr_keyword">return</strong> Collections.singleton(<span class="jxr_string">"srs"</span>);
-<a class="jxr_linenumber" name="L195" href="#L195">195</a>     }
-<a class="jxr_linenumber" name="L196" href="#L196">196</a> 
-<a class="jxr_linenumber" name="L197" href="#L197">197</a> }
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         snk.tableHeaderCell();
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>         snk.text(<span class="jxr_string">"Description"</span>);
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         snk.tableHeaderCell_();
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>         snk.tableRow_();
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">final</strong> XML facet : <strong class="jxr_keyword">this</strong>.facets(home)) {
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>             snk.tableRow();
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>             snk.tableCell();
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>             snk.link(
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>                 String.format(
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>                     <span class="jxr_string">"%s/%s"</span>,
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>                     <strong class="jxr_keyword">this</strong>.getOutputName(),
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>                     facet.xpath(<span class="jxr_string">"file/text()"</span>).get(0)
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>                 )
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>             );
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>             snk.text(facet.xpath(<span class="jxr_string">"@id"</span>).get(0));
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>             snk.link_();
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>             snk.tableCell_();
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>             snk.tableCell();
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>             snk.text(facet.xpath(<span class="jxr_string">"description/text()"</span>).get(0));
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>             snk.tableCell_();
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>             snk.tableRow_();
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         }
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>         snk.table_();
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         snk.paragraph();
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         snk.text(<span class="jxr_string">"More information you can get at "</span>);
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>         snk.link(<span class="jxr_string">"http://www.requs.org"</span>);
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         snk.text(<span class="jxr_string">"www.requs.org"</span>);
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>         snk.link_();
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         snk.text(<span class="jxr_string">"."</span>);
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         snk.paragraph_();
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         snk.section1_();
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>     }
+<a class="jxr_linenumber" name="L186" href="#L186">186</a> 
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L188" href="#L188">188</a> <em class="jxr_javadoccomment">     * All facets.</em>
+<a class="jxr_linenumber" name="L189" href="#L189">189</a> <em class="jxr_javadoccomment">     * @param dir Where to save them</em>
+<a class="jxr_linenumber" name="L190" href="#L190">190</a> <em class="jxr_javadoccomment">     * @return Names of facets (id, name, description)</em>
+<a class="jxr_linenumber" name="L191" href="#L191">191</a> <em class="jxr_javadoccomment">     * @throws MavenReportException If fails</em>
+<a class="jxr_linenumber" name="L192" href="#L192">192</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>     <strong class="jxr_keyword">private</strong> Iterable&lt;XML&gt; facets(<strong class="jxr_keyword">final</strong> File dir)
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>         <strong class="jxr_keyword">throws</strong> MavenReportException {
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>             <strong class="jxr_keyword">new</strong> <a href="../../../org/requs/Compiler.html">Compiler</a>(<strong class="jxr_keyword">this</strong>.source, dir).compile();
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> XMLDocument(<strong class="jxr_keyword">new</strong> File(dir, <span class="jxr_string">"index.xml"</span>))
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>                 .nodes(<span class="jxr_string">"/index/facets/facet"</span>);
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> IOException ex) {
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> MavenReportException(<span class="jxr_string">"failed to compile"</span>, ex);
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>         }
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>     }
+<a class="jxr_linenumber" name="L203" href="#L203">203</a> 
+<a class="jxr_linenumber" name="L204" href="#L204">204</a> }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2009&#x2013;2014 <a href="http://www.requs.org">requs.org</a>. All rights reserved.</div>

@@ -136,7 +136,7 @@
 <a class="jxr_linenumber" name="L128" href="#L128">128</a>         <strong class="jxr_keyword">final</strong> File input = <strong class="jxr_keyword">this</strong>.temp.newFolder();
 <a class="jxr_linenumber" name="L129" href="#L129">129</a>         <strong class="jxr_keyword">final</strong> File output = <strong class="jxr_keyword">this</strong>.temp.newFolder();
 <a class="jxr_linenumber" name="L130" href="#L130">130</a>         FileUtils.write(
-<a class="jxr_linenumber" name="L131" href="#L131">131</a>             <strong class="jxr_keyword">new</strong> File(input, <span class="jxr_string">"main.req"</span>),
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>             <strong class="jxr_keyword">new</strong> File(input, <span class="jxr_string">"employee.req"</span>),
 <a class="jxr_linenumber" name="L132" href="#L132">132</a>             <span class="jxr_string">"Employee is a \&quot;user of the system\&quot;."</span>
 <a class="jxr_linenumber" name="L133" href="#L133">133</a>         );
 <a class="jxr_linenumber" name="L134" href="#L134">134</a>         Main.main(
@@ -151,7 +151,7 @@
 <a class="jxr_linenumber" name="L143" href="#L143">143</a>         );
 <a class="jxr_linenumber" name="L144" href="#L144">144</a>         MatcherAssert.assertThat(
 <a class="jxr_linenumber" name="L145" href="#L145">145</a>             XhtmlMatchers.xhtml(
-<a class="jxr_linenumber" name="L146" href="#L146">146</a>                 FileUtils.readFileToString(<strong class="jxr_keyword">new</strong> File(output, <span class="jxr_string">"srs.xml"</span>))
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>                 FileUtils.readFileToString(<strong class="jxr_keyword">new</strong> File(output, <span class="jxr_string">"main.xml"</span>))
 <a class="jxr_linenumber" name="L147" href="#L147">147</a>             ),
 <a class="jxr_linenumber" name="L148" href="#L148">148</a>             XhtmlMatchers.hasXPaths(<span class="jxr_string">"/spec/types/type[name='Employee']"</span>)
 <a class="jxr_linenumber" name="L149" href="#L149">149</a>         );
