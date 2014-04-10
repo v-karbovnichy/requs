@@ -86,7 +86,7 @@
 <a class="jxr_linenumber" name="L78" href="#L78">78</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../org/requs/facet/syntax/ontology/Method.html">Method</a> method(<strong class="jxr_keyword">final</strong> String name) {
 <a class="jxr_linenumber" name="L79" href="#L79">79</a>          <strong class="jxr_keyword">this</strong>.dirs.xpath(<span class="jxr_string">"/spec"</span>).strict(1).addIf(<span class="jxr_string">"methods"</span>)
 <a class="jxr_linenumber" name="L80" href="#L80">80</a>              .xpath(String.format(<span class="jxr_string">"/spec/methods[not(method/id='%s') ]"</span>, name))
-<a class="jxr_linenumber" name="L81" href="#L81">81</a>              .add(<span class="jxr_string">"method"</span>).attr(<span class="jxr_string">"seal"</span>, <span class="jxr_string">"ffffff"</span>).add(<span class="jxr_string">"id"</span>).set(name);
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>              .add(<span class="jxr_string">"method"</span>).add(<span class="jxr_string">"id"</span>).set(name);
 <a class="jxr_linenumber" name="L82" href="#L82">82</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a href="../../../../../org/requs/facet/syntax/ontology/XeMethod.html">XeMethod</a>(
 <a class="jxr_linenumber" name="L83" href="#L83">83</a>              <strong class="jxr_keyword">this</strong>.dirs,
 <a class="jxr_linenumber" name="L84" href="#L84">84</a>              String.format(<span class="jxr_string">"/spec/methods/method[id='%s']"</span>, name)
