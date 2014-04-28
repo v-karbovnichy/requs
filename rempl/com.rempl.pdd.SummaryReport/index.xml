@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type='text/xsl' href='puzzles.xsl'?><puzzles>
-<puzzle>
-<ticket>18</ticket>
-<file>requs-core/src/test/java/org/requs/facet/markdown/MdMethodsTest.java</file>
-<prefix>     * </prefix>
-<body>The test doesn't use Phandom, but it should. For some strange reason Phandom doesn't work. It is getting only a part of HTML from phantomjs. Needs further investigation. To remove this puzzle wrap the "html" variable in "new Phandom(html).dom()", in the latest MatcherAssert.</body>
-<estimate>0</estimate>
-<lines>91-95</lines>
-<owner>someone</owner>
-</puzzle>
-</puzzles>
+<?xml-stylesheet type='text/xsl' href='puzzles.xsl'?><puzzles/>
