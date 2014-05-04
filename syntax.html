@@ -21,7 +21,7 @@
                 })();
             </script>
                                                                                                                 
-<link rel="shortcut icon" href="http://img.requs.org/favicon.gif"/>
+<link rel="shortcut icon" href="http://img.requs.org/logo-128x128.png"/>
                                             <link rel="stylesheet" href="./css/highlight.css" />
         <script src="./js/jquery-1.8.3.min.js"></script>
         <script src="./js/highlight-7.3.min.js"></script>
@@ -63,7 +63,7 @@
                                                                     </ul>
                                                     </li>
                                                                                                                         <li>
-                                                            <strong>                        <a href="syntax.html" title="Grammar">Grammar</a>
+                                                            <strong>                        <a href="syntax.html" title="Requs Syntax">Requs Syntax</a>
         </strong>
                                                                                                                                                                 <ul>
                                                                     </ul>
@@ -118,7 +118,7 @@
                     <i class="menu-button fa fa-align-justify"></i>
                     <div class="logo-section">
                         <a href="./" title="${decoration.bannerLeft.title}">
-                            <img src="http://img.requs.org/logo-.png"
+                            <img src="http://img.requs.org/logo-128x128.png"
                                 alt="requs"
                                                                     width="64"
                                                                                                     height="64"
@@ -127,9 +127,9 @@
                     </div>
                     <div class="date">
                         <div class="date-numbers">
-                            <strong>1.6.2</strong>
+                            <strong>1.7</strong>
                             
-                            29-Apr-2014
+                            04-May-2014
                         </div>
                                                                             <div class="github">
                                 <iframe
@@ -157,7 +157,6 @@
                         <div class="section">
                             <!-- This source file is subject to the new BSD license that is bundled --><!-- with this package in the file LICENSE.txt. It is also available --><!-- through the world-wide-web at this URL: http://www.requs.org/LICENSE.txt --><!-- If you did not receive a copy of the license and are unable to --><!-- obtain it through the world-wide-web, please send an email --><!-- to license@requs.org so we can send you a copy immediately. --><!--  --><!-- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS --><!-- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT --><!-- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS --><!-- FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE --><!-- COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, --><!-- INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, --><!-- BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS --><!-- OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED --><!-- AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, --><!-- OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT --><!-- OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY --><!-- OF SUCH DAMAGE. --><div class="section">
 <h2>Requs Syntax<a name="Requs_Syntax"></a></h2>
-<p><i>It's a draft!</i></p>
 <p><a class="externalLink" href="http://standards.ieee.org/reading/ieee/std_public/description/se/830-1998_desc.html">IEEE 830-1998</a> says: &quot;SRS (<i>software requirements specification</i>) should be correct, unambiguous, complete, consistent, ranked for importance and/or stability, verifiable, modifiable, traceable&quot;. Requs is a Controlled Natural Language that enables the creation of such documents in plain text format.</p>
 <div class="section">
 <h3>Quick Start<a name="Quick_Start"></a></h3>
@@ -260,7 +259,16 @@ Something lists something</pre></div>
 <div class="source">
 <pre>UC3.2/MTBF must &quot;be 5 minutes on a standard equipment&quot;.
 UC7/PERF must &quot;be less than 500 msec per request&quot;.</pre></div>
-<p>After the name of the use case you put a forward slash and then a mnemonic name of a non-functional requirement. Then, you put &quot;must be&quot; and an informal text.</p></div></div>
+<p>After the name of the use case you put a forward slash and then a mnemonic name of a non-functional requirement. Then, you put &quot;must be&quot; and an informal text.</p></div>
+<div class="section">
+<h3>Markdown Pages<a name="Markdown_Pages"></a></h3>
+<p>Sometimes you may need to add informal pages to your SRS document. For example, Vision, Business Case, wireframes, UI mockups, tables, research results, supplementary tables, etc. The syntax is simple:</p>
+<div class="source">
+<pre>Vision: &quot;&quot;&quot;
+Any text you wish, in Markdown format.
+&quot;&quot;&quot;.</pre></div>
+<p>Page name should be in CamelCase, as well as type name.</p>
+<p>Read on <a class="externalLink" href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a>.</p></div></div>
                         </div>
                     </article>
                     <img class="maven-mobile" src="./images/built-by-maven.png"
