@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
- * Copyright (c) 2012-2013, JCabi.com
+ * Copyright (c) 2012-2014, jcabi.com
  * All rights reserved.
  -->
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,19 +11,12 @@
         <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
                                                                                                                         
 <link rel="shortcut icon" href="http://img.requs.org/logo-128x128.png"/>
-                                            <link rel="stylesheet" href="./css/highlight.css" />
-        <script src="./js/jquery-1.8.3.min.js"></script>
-        <script src="./js/highlight-7.3.min.js"></script>
+                                            <script src="./js/jquery-1.8.3.min.js"></script>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
         <link href="./css/jcabi.css" rel="stylesheet"/>
         <script>
             $(document).ready(
                 function() {
-                    $('div.source pre').each(
-                        function (idx, element) {
-                            hljs.highlightBlock(element);
-                        }
-                    );
                     $(".menu-button").click(
                         function() {
                             if ($("#here-goes-menu").attr("class") == "menu-off") {
@@ -40,8 +33,8 @@
         </script>
     </head>
     <body>
-                <div class="page">
-            <div class="menu-section">
+                <section class="page">
+            <nav class="menu-section">
                 <ul id="menu">
                                                                                     <li>
                             Parent Project
@@ -62,7 +55,7 @@
                                                                     </ul>
                                                     </li>
                                                                                                                         <li>
-                                                                                    <a href="apidocs-1.7/index.html" title="JavaDoc 1.7">JavaDoc 1.7</a>
+                                                                                    <a href="apidocs-1.7.1/index.html" title="JavaDoc 1.7.1">JavaDoc 1.7.1</a>
                                                                                                                                                                         <ul>
                                                                     </ul>
                                                     </li>
@@ -119,7 +112,7 @@
                                                                     </ul>
                                                     </li>
                                                                                                                         <li>
-                                                                                    <a href="apidocs-1.7/index.html" title="JavaDocs">JavaDocs</a>
+                                                                                    <a href="apidocs-1.7.1/index.html" title="JavaDocs">JavaDocs</a>
                                                                                                                                                                         <ul>
                                                                     </ul>
                                                     </li>
@@ -138,7 +131,7 @@
                                                                                         </ul>
                                                     </li>
                                     </ul>
-            </div>
+            </nav>
             <div id="right-side">
                 <div id="content">
                     <i class="menu-button fa fa-align-justify"></i>
@@ -153,15 +146,14 @@
                     </div>
                     <div class="date">
                         <div class="date-numbers">
-                            <strong>1.7</strong>
+                            <strong>1.7.1</strong>
                             
-                            04-May-2014
+                            05-May-2014
                         </div>
                                                                     </div>
                     <div id="here-goes-menu" class="menu-off"></div>
                     <article>
-                        <div class="section">
-                            <script type="text/javascript">
+                        <script type="text/javascript">
 //<![CDATA[
 function toggleDisplay(elementId) {
  var elm = document.getElementById(elementId + 'error');
@@ -197,7 +189,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>19.259</td></tr></table><br />
+<td>26.023</td></tr></table><br />
 <p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></div>
 <div class="section">
 <h2>Package List<a name="Package_List"></a></h2><a name="Package_List"></a>
@@ -218,7 +210,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.526</td></tr>
+<td>0.117</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.syntax">org.requs.facet.syntax</a></td>
 <td>6</td>
@@ -226,7 +218,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>6.7</td></tr>
+<td>10.997</td></tr>
 <tr class="b">
 <td><a href="#org.requs">org.requs</a></td>
 <td>2</td>
@@ -234,7 +226,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.835</td></tr>
+<td>2.694</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.nfr">org.requs.facet.nfr</a></td>
 <td>1</td>
@@ -242,7 +234,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.856</td></tr>
+<td>1.018</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet.tbd">org.requs.facet.tbd</a></td>
 <td>1</td>
@@ -250,7 +242,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.862</td></tr>
+<td>1.131</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.ambiguity">org.requs.facet.ambiguity</a></td>
 <td>1</td>
@@ -258,7 +250,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.546</td></tr>
+<td>0.528</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet.pages">org.requs.facet.pages</a></td>
 <td>1</td>
@@ -266,7 +258,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.545</td></tr>
+<td>0.093</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.markdown">org.requs.facet.markdown</a></td>
 <td>1</td>
@@ -274,7 +266,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.178</td></tr>
+<td>1.642</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet">org.requs.facet</a></td>
 <td>4</td>
@@ -282,7 +274,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>2.821</td></tr>
+<td>2.065</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.syntax.ontology">org.requs.facet.syntax.ontology</a></td>
 <td>11</td>
@@ -290,7 +282,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>2.709</td></tr>
+<td>3.508</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet.sanity">org.requs.facet.sanity</a></td>
 <td>2</td>
@@ -298,7 +290,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.681</td></tr></table><br />
+<td>2.23</td></tr></table><br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
 <div class="section">
 <h3>org.requs.facet.decor<a name="org.requs.facet.decor"></a></h3><a name="org.requs.facet.decor"></a>
@@ -320,7 +312,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.526</td></tr></table></div>
+<td>0.117</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.syntax<a name="org.requs.facet.syntax"></a></h3><a name="org.requs.facet.syntax"></a>
 <table border="1" class="bodyTable">
@@ -341,7 +333,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>6.7</td></tr></table></div>
+<td>10.997</td></tr></table></div>
 <div class="section">
 <h3>org.requs<a name="org.requs"></a></h3><a name="org.requs"></a>
 <table border="1" class="bodyTable">
@@ -362,7 +354,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.835</td></tr></table></div>
+<td>2.694</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.nfr<a name="org.requs.facet.nfr"></a></h3><a name="org.requs.facet.nfr"></a>
 <table border="1" class="bodyTable">
@@ -383,7 +375,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.856</td></tr></table></div>
+<td>1.018</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.tbd<a name="org.requs.facet.tbd"></a></h3><a name="org.requs.facet.tbd"></a>
 <table border="1" class="bodyTable">
@@ -404,7 +396,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.862</td></tr></table></div>
+<td>1.131</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.ambiguity<a name="org.requs.facet.ambiguity"></a></h3><a name="org.requs.facet.ambiguity"></a>
 <table border="1" class="bodyTable">
@@ -425,7 +417,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.546</td></tr></table></div>
+<td>0.528</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.pages<a name="org.requs.facet.pages"></a></h3><a name="org.requs.facet.pages"></a>
 <table border="1" class="bodyTable">
@@ -446,7 +438,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.545</td></tr></table></div>
+<td>0.093</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.markdown<a name="org.requs.facet.markdown"></a></h3><a name="org.requs.facet.markdown"></a>
 <table border="1" class="bodyTable">
@@ -467,7 +459,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.178</td></tr></table></div>
+<td>1.642</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet<a name="org.requs.facet"></a></h3><a name="org.requs.facet"></a>
 <table border="1" class="bodyTable">
@@ -488,7 +480,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.455</td></tr>
+<td>0.508</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facetTransformTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facetTransformTest">TransformTest</a></td>
@@ -497,7 +489,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>2.366</td></tr></table></div>
+<td>1.557</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.syntax.ontology<a name="org.requs.facet.syntax.ontology"></a></h3><a name="org.requs.facet.syntax.ontology"></a>
 <table border="1" class="bodyTable">
@@ -518,7 +510,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.146</td></tr>
+<td>0.234</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.syntax.ontologyXeOntologyTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeOntologyTest">XeOntologyTest</a></td>
@@ -527,7 +519,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.929</td></tr>
+<td>2.105</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet.syntax.ontologyXeSlotTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeSlotTest">XeSlotTest</a></td>
@@ -536,7 +528,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.036</td></tr>
+<td>0.521</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.syntax.ontologyXeStepTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeStepTest">XeStepTest</a></td>
@@ -545,7 +537,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.071</td></tr>
+<td>0.06</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet.syntax.ontologyXeTypeTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeTypeTest">XeTypeTest</a></td>
@@ -554,7 +546,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.527</td></tr></table></div>
+<td>0.588</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.sanity<a name="org.requs.facet.sanity"></a></h3><a name="org.requs.facet.sanity"></a>
 <table border="1" class="bodyTable">
@@ -575,7 +567,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.681</td></tr></table></div><br /></div>
+<td>2.23</td></tr></table></div><br /></div>
 <div class="section">
 <h2>Test Cases<a name="Test_Cases"></a></h2><a name="Test_Cases"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p>
@@ -585,188 +577,184 @@ function toggleDisplay(elementId) {
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>compilesRequsSources</td>
-<td>0.769</td></tr>
+<td>1.3</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>producesRenderableXml</td>
-<td>1.066</td></tr></table></div>
+<td>1.394</td></tr></table></div>
 <div class="section">
 <h3>ScaffoldingTest<a name="ScaffoldingTest"></a></h3><a name="org.requs.facetScaffoldingTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>createsIndexFile</td>
-<td>0.455</td></tr></table></div>
+<td>0.508</td></tr></table></div>
 <div class="section">
 <h3>TransformTest<a name="TransformTest"></a></h3><a name="org.requs.facetTransformTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>checksSignatures</td>
-<td>0.785</td></tr>
+<td>checksSeals</td>
+<td>0.583</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>checksTypes</td>
-<td>0.738</td></tr>
+<td>checksSignatures</td>
+<td>0.367</td></tr>
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>checksSeals</td>
-<td>0.843</td></tr></table></div>
+<td>checksTypes</td>
+<td>0.607</td></tr></table></div>
 <div class="section">
 <h3>OverallTest<a name="OverallTest"></a></h3><a name="org.requs.facet.ambiguityOverallTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>generatesMarkdownForMethods</td>
-<td>0.546</td></tr></table></div>
+<td>0.528</td></tr></table></div>
 <div class="section">
 <h3>CatalogTest<a name="CatalogTest"></a></h3><a name="org.requs.facet.decorCatalogTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>generatesFacets</td>
-<td>0.526</td></tr></table></div>
+<td>0.117</td></tr></table></div>
 <div class="section">
 <h3>MdMethodsTest<a name="MdMethodsTest"></a></h3><a name="org.requs.facet.markdownMdMethodsTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>generatesMarkdownForMethods</td>
-<td>1.178</td></tr></table></div>
+<td>1.642</td></tr></table></div>
 <div class="section">
 <h3>NFRsTest<a name="NFRsTest"></a></h3><a name="org.requs.facet.nfrNFRsTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>findsNfrs</td>
-<td>0.856</td></tr></table></div>
+<td>1.018</td></tr></table></div>
 <div class="section">
 <h3>MdPagesTest<a name="MdPagesTest"></a></h3><a name="org.requs.facet.pagesMdPagesTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>generatesMarkdownForMethods</td>
-<td>0.545</td></tr></table></div>
+<td>0.093</td></tr></table></div>
 <div class="section">
 <h3>SealedTest<a name="SealedTest"></a></h3><a name="org.requs.facet.sanitySealedTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>sealsUseCases</td>
-<td>0.308</td></tr>
+<td>1.049</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>ignoresNonImportantElements</td>
-<td>0.373</td></tr></table></div>
+<td>1.181</td></tr></table></div>
 <div class="section">
 <h3>AntlrFacetTest<a name="AntlrFacetTest"></a></h3><a name="org.requs.facet.syntaxAntlrFacetTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>parsesAllPossibleCases</td>
-<td>1.761</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>parsesAllPossibleErrors</td>
-<td>1.626</td></tr>
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>reportsErrorsFound</td>
-<td>0.506</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>compilesComplexSpec</td>
-<td>1.231</td></tr>
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>parsesInputAndProducesTypes</td>
-<td>0.467</td></tr>
+<td>2.356</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>parsesAllSamples</td>
-<td>1.109</td></tr></table></div>
+<td>2.231</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>parsesInputAndProducesTypes</td>
+<td>1.104</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>parsesAllPossibleErrors</td>
+<td>2.555</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>compilesComplexSpec</td>
+<td>1.486</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>reportsErrorsFound</td>
+<td>1.265</td></tr></table></div>
 <div class="section">
 <h3>XeMethodTest<a name="XeMethodTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeMethodTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>avoidsDuplicateSteps</td>
-<td>0.034</td></tr>
+<td>manipulatesWithMethod</td>
+<td>0.066</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>setsAttributes</td>
-<td>0.03</td></tr>
+<td>avoidsDuplicateSteps</td>
+<td>0.056</td></tr>
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>createsNfr</td>
-<td>0.042</td></tr>
+<td>0.07</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>manipulatesWithMethod</td>
-<td>0.04</td></tr></table></div>
+<td>setsAttributes</td>
+<td>0.042</td></tr></table></div>
 <div class="section">
 <h3>XeOntologyTest<a name="XeOntologyTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeOntologyTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>avoidsDuplication</td>
-<td>0.471</td></tr>
+<td>manipulatesWithTypesAndUseCases</td>
+<td>0.591</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>avoidsDuplicationOfMethods</td>
-<td>0.471</td></tr>
+<td>0.507</td></tr>
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>manipulatesWithTypesAndUseCases</td>
-<td>0.517</td></tr>
+<td>reportsRequsVersion</td>
+<td>0.522</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>reportsRequsVersion</td>
-<td>0.47</td></tr></table></div>
+<td>avoidsDuplication</td>
+<td>0.485</td></tr></table></div>
 <div class="section">
 <h3>XeSlotTest<a name="XeSlotTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeSlotTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>manipulatesWithProperty</td>
-<td>0.036</td></tr></table></div>
+<td>0.521</td></tr></table></div>
 <div class="section">
 <h3>XeStepTest<a name="XeStepTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeStepTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>manipulatesWithSteps</td>
-<td>0.071</td></tr></table></div>
+<td>0.06</td></tr></table></div>
 <div class="section">
 <h3>XeTypeTest<a name="XeTypeTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeTypeTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>manipulatesWithType</td>
-<td>0.527</td></tr></table></div>
+<td>0.588</td></tr></table></div>
 <div class="section">
 <h3>TBDsTest<a name="TBDsTest"></a></h3><a name="org.requs.facet.tbdTBDsTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>findsTbds</td>
-<td>0.862</td></tr></table></div><br /></div>
-                        </div>
+<td>1.131</td></tr></table></div><br /></div>
                     </article>
-                    <img class="maven-mobile" src="./images/built-by-maven.png"
-                        alt="built by maven" style="float:right" width="80"/>
+                    <img class="maven-mobile" src="./images/built-by-maven.png" alt="built by maven"/>
                 </div>
-                <div class="legal-notes">
-                    <div class="copyright">
-                        Copyright &#169;
-                                                                            2009-2014
-                                                <br/>
-                        requs.org, All Rights Reserved.
-                        <br/>
-                        <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
-                    </div>
-                </div>
+                <footer class="legal-notes">
+                    Copyright &#169;
+                                                                2009-2014
+                                        <br/>
+                    requs.org, All Rights Reserved.
+                    <br/>
+                    <a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.
+                </footer>
             </div>
-        </div>
+        </section>
     </body>
 </html>
