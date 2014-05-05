@@ -7,8 +7,9 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>requs - Project Dependencies</title>
+        <title>requs - Attributes and Seals</title>
         <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
+                    <meta name="author" content="Yegor Bugayenko" />
                             <script>
                 var _gaq = _gaq || [];
                 _gaq.push(['_setAccount', 'UA-1963507-31']);
@@ -75,8 +76,9 @@
                                                                     </ul>
                                                     </li>
                                                                                                                         <li>
-                                                                                    <a href="feature-attributes.html" title="Attributes and Seals">Attributes and Seals</a>
-                                                                                                                                                                        <ul>
+                                                            <strong>                        <a href="feature-attributes.html" title="Attributes and Seals">Attributes and Seals</a>
+        </strong>
+                                                                                                                                                                <ul>
                                                                     </ul>
                                                     </li>
                                                                                         </ul>
@@ -111,55 +113,7 @@
                                                             <ul>
                                                                                                     <li>
                                                                                     <a href="project-info.html" title="Project Information">Project Information</a>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <ul>
-                                                                                                    <li>
-                                                                                    <a href="integration.html" title="Continuous Integration">Continuous Integration</a>
-                                                                                                                                                                        <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li>
-                                                            <strong>                        <a href="dependencies.html" title="Dependencies">Dependencies</a>
-        </strong>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li>
-                                                                                    <a href="issue-tracking.html" title="Issue Tracking">Issue Tracking</a>
-                                                                                                                                                                        <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li>
-                                                                                    <a href="license.html" title="Project License">Project License</a>
-                                                                                                                                                                        <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li>
-                                                                                    <a href="mail-lists.html" title="Mailing Lists">Mailing Lists</a>
-                                                                                                                                                                        <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li>
-                                                                                    <a href="plugins.html" title="Project Plugins">Project Plugins</a>
-                                                                                                                                                                        <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li>
-                                                                                    <a href="team-list.html" title="Project Team">Project Team</a>
-                                                                                                                                                                        <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li>
-                                                                                    <a href="source-repository.html" title="Source Repository">Source Repository</a>
-                                                                                                                                                                        <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li>
-                                                                                    <a href="project-summary.html" title="Project Summary">Project Summary</a>
-                                                                                                                                                                        <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </li>
                                                                                                                         <li>
                                                                                     <a href="project-reports.html" title="Project Reports">Project Reports</a>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     </li>
@@ -208,10 +162,49 @@
                                             </div>
                     <div id="here-goes-menu" class="menu-off"></div>
                     <article>
-                        <a name="Project_Dependencies"></a>
+                        <!-- This source file is subject to the new BSD license that is bundled --><!-- with this package in the file LICENSE.txt. It is also available --><!-- through the world-wide-web at this URL: http://www.requs.org/LICENSE.txt --><!-- If you did not receive a copy of the license and are unable to --><!-- obtain it through the world-wide-web, please send an email --><!-- to license@requs.org so we can send you a copy immediately. --><!--  --><!-- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS --><!-- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT --><!-- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS --><!-- FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE --><!-- COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, --><!-- INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, --><!-- BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS --><!-- OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED --><!-- AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, --><!-- OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT --><!-- OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY --><!-- OF SUCH DAMAGE. --><div class="section">
+<h2>Attributes and Seals<a name="Attributes_and_Seals"></a></h2>
+<p>Any use case may have attributes assigned to it. Attribute is a small-caps English word, without spaces or numbers inside. For example:</p>
+<div class="source">
+<pre>:UC3.2 is a must.
+:UC8 is delivered.</pre></div>
+<p>In this example, <tt>must</tt> is an attribute of <tt>UC3.2</tt> and <tt>delivered</tt> is an attribute of <tt>UC8</tt>.</p>
+<p>We recommend to use attributes for requirements prioritization, according to <a class="externalLink" href="http://en.wikipedia.org/wiki/MoSCoW_method">MoSCoW method</a>:</p>
+<ul>
+<li><tt>must</tt></li>
+<li><tt>should</tt></li>
+<li><tt>could</tt></li>
+<li><tt>would</tt></li></ul>
+<p>We also recommend to use attributes for <a class="externalLink" href="http://en.wikipedia.org/wiki/Requirement_prioritization">requirements prioritization</a>:</p>
+<ul>
+<li><tt>specified</tt></li>
+<li><tt>implemented</tt></li>
+<li><tt>delivered</tt></li>
+<li><tt>accepted</tt></li></ul>
 <div class="section">
-<h2>Project Dependencies<a name="Project_Dependencies"></a></h2>
-<p>There are no dependencies for this project. It is a standalone application that does not depend on any other project.</p></div>
+<h3>Seals<a name="Seals"></a></h3>
+<p>When attribute is specified, it is possible to &quot;seal&quot; it. A seal is a 6-signs <a class="externalLink" href="http://en.wikipedia.org/wiki/Hexadecimal">hexadecimal</a> number, calculated by Requs engine, as an <a class="externalLink" href="http://en.wikipedia.org/wiki/MD5">MD5</a> hash function of the use case content.</p>
+<p>For example, these two use cases will have two different seals:</p>
+<div class="source">
+<pre>UC3 where nothing happens: &quot;tbd&quot;.
+UC3 where nothing really happens: &quot;tbd&quot;.</pre></div>
+<p>Their signatures are different, that's why their seals are also different.</p>
+<p>In order to calculate a seal for your use case, just add a random seal (for example, <tt>ffffff</tt>) and run <tt>mvn requs:compile</tt>:</p>
+<div class="source">
+<pre>ffffff:UC3 is a must.</pre></div>
+<p>You will get an error message, similar to this:</p>
+<div class="source">
+<pre>[ERROR] 17:0 Seal &quot;2edb8f&quot; at the method UC3 doesn't match &quot;ffffff&quot; at the attribute &quot;must&quot;</pre></div>
+<p>The message means that Requs engine is expecting <tt>2edb8f</tt> as a seal for all <tt>UC3</tt> attributes. We set it to <tt>ffffff</tt> --- this breaks the build and makes our Requs specification in-compilable.</p>
+<p>Now, we can change <tt>ffffff</tt> to <tt>2edb8f</tt> in the specification and Requs won't complain any more.</p>
+<p>When, in the future, someone changes the content of <tt>UC3</tt>, they will break the build and will have to change the seal for all attributes.</p></div>
+<div class="section">
+<h3>Baselined Attributes<a name="Baselined_Attributes"></a></h3>
+<p>This mechanism exists in Requs in order to be able to <a class="externalLink" href="http://en.wikipedia.org/wiki/Baseline_%28configuration_management%29">baseline</a> individual requirements in a continuously changing document.</p>
+<p>Say, use case <tt>UC3</tt> is already implemented and delivered to the product owner. It has an attribute <tt>delivered</tt> in the SRS, and this attribute is sealed.</p>
+<p>Then, someone is changing the description of <tt>UC3</tt>. The seal doesn't work any more and Requs starts complaining. In order to make the build clean again, the author of these changes has to remove the seal from the document.</p>
+<p><tt>UC3</tt> doesn't have a seal any more. It is clear for the project manager, that it needs to be implemented and delivered to the product owner again.</p>
+<p>Thus, being a system analyst working with the SRS, be aware that if any seal doesn't match its expected value after your changes, you should just remove the seal.</p></div></div>
                     </article>
                     <img class="maven-mobile" src="./images/built-by-maven.png" alt="built by maven"/>
                 </div>
