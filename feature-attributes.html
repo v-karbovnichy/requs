@@ -135,9 +135,9 @@
                     </div>
                     <div class="date">
                         <div class="date-numbers">
-                            <strong>1.7.1</strong>
+                            <strong>1.8</strong>
                             
-                            05-May-2014
+                            12-May-2014
                         </div>
                                                                             <div class="github">
                                 <iframe
@@ -203,8 +203,12 @@ UC3 where nothing really happens: &quot;tbd&quot;.</pre></div>
 <p>This mechanism exists in Requs in order to be able to <a class="externalLink" href="http://en.wikipedia.org/wiki/Baseline_%28configuration_management%29">baseline</a> individual requirements in a continuously changing document.</p>
 <p>Say, use case <tt>UC3</tt> is already implemented and delivered to the product owner. It has an attribute <tt>delivered</tt> in the SRS, and this attribute is sealed.</p>
 <p>Then, someone is changing the description of <tt>UC3</tt>. The seal doesn't work any more and Requs starts complaining. In order to make the build clean again, the author of these changes has to remove the seal from the document.</p>
-<p><tt>UC3</tt> doesn't have a seal any more. It is clear for the project manager, that it needs to be implemented and delivered to the product owner again.</p>
-<p>Thus, being a system analyst working with the SRS, be aware that if any seal doesn't match its expected value after your changes, you should just remove the seal.</p></div></div>
+<p><tt>UC3</tt> doesn't have a seal any more. It is clear for the project manager, that this use case needs to be implemented and delivered to the product owner again.</p>
+<p>Thus, being a system analyst working with the SRS, be aware that if any seal doesn't match its expected value after your changes, you should just remove the seal.</p></div>
+<div class="section">
+<h3>Who Seals Use Cases?<a name="Who_Seals_Use_Cases"></a></h3>
+<p>Seals are supposed to be placed in the SRS by a project manager. Well, not necessarily a PM, but a person who is responsible for changing statuses or priorities of requirements.</p>
+<p>Usually it happens on project milestones, when priorities are set and requirements are baselined.</p></div></div>
                     </article>
                     <img class="maven-mobile" src="./images/built-by-maven.png" alt="built by maven"/>
                 </div>
