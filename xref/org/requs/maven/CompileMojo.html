@@ -94,7 +94,7 @@
 <a class="jxr_linenumber" name="L86" href="#L86">86</a>          StaticLoggerBinder.getSingleton().setMavenLog(<strong class="jxr_keyword">this</strong>.getLog());
 <a class="jxr_linenumber" name="L87" href="#L87">87</a>          <strong class="jxr_keyword">try</strong> {
 <a class="jxr_linenumber" name="L88" href="#L88">88</a>              <strong class="jxr_keyword">new</strong> <a href="../../../org/requs/Compiler.html">Compiler</a>(<strong class="jxr_keyword">this</strong>.input, <strong class="jxr_keyword">this</strong>.output).compile();
-<a class="jxr_linenumber" name="L89" href="#L89">89</a>              <strong class="jxr_keyword">final</strong> XML srs = <strong class="jxr_keyword">new</strong> XMLDocument(<strong class="jxr_keyword">new</strong> File(<strong class="jxr_keyword">this</strong>.output, <span class="jxr_string">"main.xml"</span>));
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>              <strong class="jxr_keyword">final</strong> XML srs = <strong class="jxr_keyword">new</strong> XMLDocument(<strong class="jxr_keyword">new</strong> File(<strong class="jxr_keyword">this</strong>.output, <span class="jxr_string">"requs.xml"</span>));
 <a class="jxr_linenumber" name="L90" href="#L90">90</a>              <strong class="jxr_keyword">final</strong> Collection&lt;XML&gt; errors = srs.nodes(<span class="jxr_string">"//errors/error"</span>);
 <a class="jxr_linenumber" name="L91" href="#L91">91</a>              <strong class="jxr_keyword">if</strong> (!errors.isEmpty()) {
 <a class="jxr_linenumber" name="L92" href="#L92">92</a>                  <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">final</strong> XML error : errors) {
