@@ -144,11 +144,11 @@
                             </div>
                             <div class="date">
                                 <div class="date-numbers">
-                                    <strong itemprop="version">1.9</strong>
+                                    <strong itemprop="version">1.10</strong>
                                     
-                                    <time itemprop="datePublished" datetime="2014-05-23T10:59:45Z">
+                                    <time itemprop="datePublished" datetime="2014-05-25T10:18:07Z">
                                         
-                                        23-May-2014
+                                        25-May-2014
                                     </time>
                                 </div>
                                                                                                     <div>
@@ -211,12 +211,13 @@ UC8.1/3 when &quot;invalid format&quot;:
 <p>There are seven <b>main flows</b> in this use case, and five <b>alternative flows</b>. Flows <tt>1</tt>, <tt>5</tt>, <tt>6</tt>, and <tt>7</tt> instruct us to include other use cases that match the signatures provided and pass them the objects we have.</p></div>
 <div class="section">
 <h3>USING<a name="USING"></a></h3>
-<p>In the example above, one of the use case steps mentioned <b>using</b> operator:</p>
+<p>In the example above, one of the use case steps mentioned <tt>using</tt> operator:</p>
 <div class="source">
 <pre>The friend receives email using SmtpServer.</pre></div>
 <p>This is similar to sending arguments to a method. In this line we're calling a method &quot;receives&quot; on &quot;the friend&quot; object like this:</p>
 <div class="source">
-<pre>friend.receives_email(smtp_server);</pre></div></div>
+<pre>friend.receives_email(smtp_server);</pre></div>
+<p>Instead of <tt>using</tt> you can use <tt>of</tt> or <tt>with</tt>. These three keywords are reserved and can't be used as English words.</p></div>
 <div class="section">
 <h3>CRUDL<a name="CRUDL"></a></h3>
 <p>There are four use cases that are included by <tt>UC8.1</tt>. They have to be defined somewhere else in the document, otherwise the document will be semantically incomplete. But not all four are mandatory, because there is a number of <b>elementary use cases</b>, which are defined in the system, even if the document is empty. The elementary use cases are (<a class="externalLink" href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> requirements pattern):</p>

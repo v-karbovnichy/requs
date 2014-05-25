@@ -183,45 +183,46 @@
 <a class="jxr_linenumber" name="L175" href="#L175">175</a>         <strong class="jxr_keyword">final</strong> String[] files = {
 <a class="jxr_linenumber" name="L176" href="#L176">176</a>             <span class="jxr_string">"samples/nfr.xml"</span>,
 <a class="jxr_linenumber" name="L177" href="#L177">177</a>             <span class="jxr_string">"samples/method.xml"</span>,
-<a class="jxr_linenumber" name="L178" href="#L178">178</a>             <span class="jxr_string">"samples/pages.xml"</span>,
-<a class="jxr_linenumber" name="L179" href="#L179">179</a>             <span class="jxr_string">"samples/informals.xml"</span>,
-<a class="jxr_linenumber" name="L180" href="#L180">180</a>             <span class="jxr_string">"samples/all-possible-mistakes.xml"</span>,
-<a class="jxr_linenumber" name="L181" href="#L181">181</a>         };
-<a class="jxr_linenumber" name="L182" href="#L182">182</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">final</strong> String file : files) {
-<a class="jxr_linenumber" name="L183" href="#L183">183</a>             <strong class="jxr_keyword">final</strong> XML xml = <strong class="jxr_keyword">new</strong> XMLDocument(
-<a class="jxr_linenumber" name="L184" href="#L184">184</a>                 <strong class="jxr_keyword">this</strong>.getClass().getResourceAsStream(file)
-<a class="jxr_linenumber" name="L185" href="#L185">185</a>             );
-<a class="jxr_linenumber" name="L186" href="#L186">186</a>             <strong class="jxr_keyword">final</strong> Collection&lt;String&gt; xpaths = xml.xpath(
-<a class="jxr_linenumber" name="L187" href="#L187">187</a>                 <span class="jxr_string">"/sample/xpaths/xpath/text()"</span>
-<a class="jxr_linenumber" name="L188" href="#L188">188</a>             );
-<a class="jxr_linenumber" name="L189" href="#L189">189</a>             MatcherAssert.assertThat(
-<a class="jxr_linenumber" name="L190" href="#L190">190</a>                 AntlrFacetTest.parse(xml.xpath(<span class="jxr_string">"/sample/spec/text()"</span>).get(0)),
-<a class="jxr_linenumber" name="L191" href="#L191">191</a>                 XhtmlMatchers.hasXPaths(
-<a class="jxr_linenumber" name="L192" href="#L192">192</a>                     xpaths.toArray(<strong class="jxr_keyword">new</strong> String[xpaths.size()])
-<a class="jxr_linenumber" name="L193" href="#L193">193</a>                 )
-<a class="jxr_linenumber" name="L194" href="#L194">194</a>             );
-<a class="jxr_linenumber" name="L195" href="#L195">195</a>         }
-<a class="jxr_linenumber" name="L196" href="#L196">196</a>     }
-<a class="jxr_linenumber" name="L197" href="#L197">197</a> 
-<a class="jxr_linenumber" name="L198" href="#L198">198</a>     <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L199" href="#L199">199</a> <em class="jxr_javadoccomment">     * Parse input.</em>
-<a class="jxr_linenumber" name="L200" href="#L200">200</a> <em class="jxr_javadoccomment">     * @param input Input syntax</em>
-<a class="jxr_linenumber" name="L201" href="#L201">201</a> <em class="jxr_javadoccomment">     * @return XML output</em>
-<a class="jxr_linenumber" name="L202" href="#L202">202</a> <em class="jxr_javadoccomment">     * @throws Exception If fails</em>
-<a class="jxr_linenumber" name="L203" href="#L203">203</a> <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="L204" href="#L204">204</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Source parse(<strong class="jxr_keyword">final</strong> String input) <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="L205" href="#L205">205</a>         <strong class="jxr_keyword">return</strong> XhtmlMatchers.xhtml(
-<a class="jxr_linenumber" name="L206" href="#L206">206</a>             <strong class="jxr_keyword">new</strong> XeFacet.Wrap(<strong class="jxr_keyword">new</strong> AntlrFacet()).touch(
-<a class="jxr_linenumber" name="L207" href="#L207">207</a>                 <strong class="jxr_keyword">new</strong> XMLDocument(
-<a class="jxr_linenumber" name="L208" href="#L208">208</a>                     <strong class="jxr_keyword">new</strong> Xembler(
-<a class="jxr_linenumber" name="L209" href="#L209">209</a>                         <strong class="jxr_keyword">new</strong> Directives().add(<span class="jxr_string">"spec"</span>).add(<span class="jxr_string">"input"</span>).set(input)
-<a class="jxr_linenumber" name="L210" href="#L210">210</a>                     ).xml()
-<a class="jxr_linenumber" name="L211" href="#L211">211</a>                 )
-<a class="jxr_linenumber" name="L212" href="#L212">212</a>             )
-<a class="jxr_linenumber" name="L213" href="#L213">213</a>         );
-<a class="jxr_linenumber" name="L214" href="#L214">214</a>     }
-<a class="jxr_linenumber" name="L215" href="#L215">215</a> 
-<a class="jxr_linenumber" name="L216" href="#L216">216</a> }
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>             <span class="jxr_string">"samples/types.xml"</span>,
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>             <span class="jxr_string">"samples/pages.xml"</span>,
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>             <span class="jxr_string">"samples/informals.xml"</span>,
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>             <span class="jxr_string">"samples/all-possible-mistakes.xml"</span>,
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         };
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">final</strong> String file : files) {
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>             <strong class="jxr_keyword">final</strong> XML xml = <strong class="jxr_keyword">new</strong> XMLDocument(
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>                 <strong class="jxr_keyword">this</strong>.getClass().getResourceAsStream(file)
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>             );
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>             <strong class="jxr_keyword">final</strong> Collection&lt;String&gt; xpaths = xml.xpath(
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>                 <span class="jxr_string">"/sample/xpaths/xpath/text()"</span>
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>             );
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>             MatcherAssert.assertThat(
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>                 AntlrFacetTest.parse(xml.xpath(<span class="jxr_string">"/sample/spec/text()"</span>).get(0)),
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>                 XhtmlMatchers.hasXPaths(
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>                     xpaths.toArray(<strong class="jxr_keyword">new</strong> String[xpaths.size()])
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>                 )
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>             );
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         }
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>     }
+<a class="jxr_linenumber" name="L198" href="#L198">198</a> 
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L200" href="#L200">200</a> <em class="jxr_javadoccomment">     * Parse input.</em>
+<a class="jxr_linenumber" name="L201" href="#L201">201</a> <em class="jxr_javadoccomment">     * @param input Input syntax</em>
+<a class="jxr_linenumber" name="L202" href="#L202">202</a> <em class="jxr_javadoccomment">     * @return XML output</em>
+<a class="jxr_linenumber" name="L203" href="#L203">203</a> <em class="jxr_javadoccomment">     * @throws Exception If fails</em>
+<a class="jxr_linenumber" name="L204" href="#L204">204</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> Source parse(<strong class="jxr_keyword">final</strong> String input) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         <strong class="jxr_keyword">return</strong> XhtmlMatchers.xhtml(
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>             <strong class="jxr_keyword">new</strong> XeFacet.Wrap(<strong class="jxr_keyword">new</strong> AntlrFacet()).touch(
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>                 <strong class="jxr_keyword">new</strong> XMLDocument(
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>                     <strong class="jxr_keyword">new</strong> Xembler(
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>                         <strong class="jxr_keyword">new</strong> Directives().add(<span class="jxr_string">"spec"</span>).add(<span class="jxr_string">"input"</span>).set(input)
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>                     ).xml()
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>                 )
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>             )
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>         );
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>     }
+<a class="jxr_linenumber" name="L216" href="#L216">216</a> 
+<a class="jxr_linenumber" name="L217" href="#L217">217</a> }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2009&#x2013;2014 <a href="http://www.requs.org">requs.org</a>. All rights reserved.</div>
