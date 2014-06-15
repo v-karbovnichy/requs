@@ -30,7 +30,7 @@
     <body>
                 <section class="page" itemscope="" itemtype="http://schema.org/BlogPosting">
             <nav class="menu-section" role="navigation">
-                <ul class="menu">
+                <ul class="menu" id="menu">
                                                                                     <li>
                             Parent Project
                                                             <ul>
@@ -52,7 +52,7 @@
                                                                     </ul>
                                                     </li>
                                                                                                                         <li >
-                            <span>                        <a href="apidocs-1.10/index.html" title="JavaDoc 1.10">JavaDoc 1.10</a>
+                            <span>                        <a href="apidocs-1.11/index.html" title="JavaDoc 1.11">JavaDoc 1.11</a>
         </span>
                                                                                                                                                                 <ul>
                                                                     </ul>
@@ -101,7 +101,7 @@
                                                                     </ul>
                                                     </li>
                                                                                                                         <li >
-                            <span>                        <a href="apidocs-1.10/index.html" title="JavaDocs">JavaDocs</a>
+                            <span>                        <a href="apidocs-1.11/index.html" title="JavaDocs">JavaDocs</a>
         </span>
                                                                                                                                                                 <ul>
                                                                     </ul>
@@ -142,11 +142,11 @@
                             </div>
                             <div class="date">
                                 <div class="date-numbers">
-                                    <strong itemprop="version">1.10</strong>
+                                    <strong itemprop="version">1.11</strong>
                                     
-                                    <time itemprop="datePublished" datetime="2014-05-25T10:18:50Z">
+                                    <time itemprop="datePublished" datetime="2014-06-15T10:56:23Z">
                                         
-                                        25-May-2014
+                                        15-Jun-2014
                                     </time>
                                 </div>
                                                                                             </div>
@@ -184,12 +184,12 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td>24</td>
+<td>26</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>15.646</td></tr></table><br />
+<td>2</td>
+<td>92.308%</td>
+<td>13.243</td></tr></table><br />
 <p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></div>
 <div class="section">
 <h2>Package List<a name="Package_List"></a></h2><a name="Package_List"></a>
@@ -210,7 +210,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>5.137</td></tr>
+<td>5.222</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.sa">org.requs.facet.sa</a></td>
 <td>1</td>
@@ -218,15 +218,15 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.087</td></tr>
+<td>0.432</td></tr>
 <tr class="b">
 <td><a href="#org.requs">org.requs</a></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
 <td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>3.47</td></tr>
+<td>50%</td>
+<td>1.522</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet">org.requs.facet</a></td>
 <td>3</td>
@@ -234,7 +234,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>2.231</td></tr>
+<td>2.303</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet.syntax.ontology">org.requs.facet.syntax.ontology</a></td>
 <td>13</td>
@@ -242,7 +242,15 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>4.721</td></tr></table><br />
+<td>3.764</td></tr>
+<tr class="a">
+<td><a href="#org.requs.facet.uml">org.requs.facet.uml</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0%</td>
+<td>0</td></tr></table><br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
 <div class="section">
 <h3>org.requs.facet.syntax<a name="org.requs.facet.syntax"></a></h3><a name="org.requs.facet.syntax"></a>
@@ -264,7 +272,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>5.137</td></tr></table></div>
+<td>5.222</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.sa<a name="org.requs.facet.sa"></a></h3><a name="org.requs.facet.sa"></a>
 <table border="1" class="bodyTable">
@@ -285,7 +293,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.087</td></tr></table></div>
+<td>0.432</td></tr></table></div>
 <div class="section">
 <h3>org.requs<a name="org.requs"></a></h3><a name="org.requs"></a>
 <table border="1" class="bodyTable">
@@ -299,14 +307,14 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td><a href="#org.requsCompilerTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#org.requsCompilerTest"><img src="images/icon_warning_sml.gif" alt="" /></a></td>
 <td><a href="#org.requsCompilerTest">CompilerTest</a></td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
 <td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>3.47</td></tr></table></div>
+<td>50%</td>
+<td>1.522</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet<a name="org.requs.facet"></a></h3><a name="org.requs.facet"></a>
 <table border="1" class="bodyTable">
@@ -327,7 +335,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>2.231</td></tr></table></div>
+<td>2.303</td></tr></table></div>
 <div class="section">
 <h3>org.requs.facet.syntax.ontology<a name="org.requs.facet.syntax.ontology"></a></h3><a name="org.requs.facet.syntax.ontology"></a>
 <table border="1" class="bodyTable">
@@ -348,7 +356,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.7</td></tr>
+<td>0.174</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.syntax.ontologyXeMethodTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeMethodTest">XeMethodTest</a></td>
@@ -357,7 +365,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.476</td></tr>
+<td>1.136</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet.syntax.ontologyXeOntologyTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeOntologyTest">XeOntologyTest</a></td>
@@ -366,7 +374,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.062</td></tr>
+<td>0.952</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.syntax.ontologyXeSignatureTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeSignatureTest">XeSignatureTest</a></td>
@@ -375,7 +383,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.297</td></tr>
+<td>0.288</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet.syntax.ontologyXeSlotTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeSlotTest">XeSlotTest</a></td>
@@ -384,7 +392,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.358</td></tr>
+<td>0.363</td></tr>
 <tr class="a">
 <td><a href="#org.requs.facet.syntax.ontologyXeStepTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeStepTest">XeStepTest</a></td>
@@ -393,7 +401,7 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.437</td></tr>
+<td>0.443</td></tr>
 <tr class="b">
 <td><a href="#org.requs.facet.syntax.ontologyXeTypeTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
 <td><a href="#org.requs.facet.syntax.ontologyXeTypeTest">XeTypeTest</a></td>
@@ -402,7 +410,28 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.391</td></tr></table></div><br /></div>
+<td>0.408</td></tr></table></div>
+<div class="section">
+<h3>org.requs.facet.uml<a name="org.requs.facet.uml"></a></h3><a name="org.requs.facet.uml"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<th></th>
+<th>Class</th>
+<th>Tests</th>
+<th>Errors </th>
+<th>Failures</th>
+<th>Skipped</th>
+<th>Success Rate</th>
+<th>Time</th></tr>
+<tr class="b">
+<td><a href="#org.requs.facet.umlPlantTest"><img src="images/icon_warning_sml.gif" alt="" /></a></td>
+<td><a href="#org.requs.facet.umlPlantTest">PlantTest</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0%</td>
+<td>0</td></tr></table></div><br /></div>
 <div class="section">
 <h2>Test Cases<a name="Test_Cases"></a></h2><a name="Test_Cases"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p>
@@ -411,130 +440,167 @@ function toggleDisplay(elementId) {
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>parsesAllSamples</td>
-<td>3.47</td></tr></table></div>
+<td>combinesMultipleFiles</td>
+<td>1.522</td></tr>
+<tr class="b">
+<td><a href="#org.requs.CompilerTest.parsesAllSamples"><img src="images/icon_warning_sml.gif" alt="" /></a></td>
+<td><a href="#org.requs.CompilerTest.parsesAllSamples">parsesAllSamples</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;org_requs_CompilerTest_parsesAllSamples&apos;);"><span style="display:inline;" id="org_requs_CompilerTest_parsesAllSamplesoff"> + </span><span style="display:none;" id="org_requs_CompilerTest_parsesAllSampleson"> - </span>[ Detail ]</a></div></td>
+<td>0</td></tr>
+<tr class="a">
+<td></td>
+<td>skipped</td>
+<td></td></tr></table></div>
 <div class="section">
 <h3>TransformTest<a name="TransformTest"></a></h3><a name="org.requs.facetTransformTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>checksSignatures</td>
-<td>0.747</td></tr>
+<td>checksSeals</td>
+<td>0.762</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>checksTypes</td>
-<td>0.746</td></tr>
+<td>checksSignatures</td>
+<td>0.775</td></tr>
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>checksSeals</td>
-<td>0.738</td></tr></table></div>
+<td>checksTypes</td>
+<td>0.766</td></tr></table></div>
 <div class="section">
 <h3>RulesTest<a name="RulesTest"></a></h3><a name="org.requs.facet.saRulesTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>checksInput</td>
-<td>0.087</td></tr></table></div>
+<td>0.432</td></tr></table></div>
 <div class="section">
 <h3>AntlrFacetTest<a name="AntlrFacetTest"></a></h3><a name="org.requs.facet.syntaxAntlrFacetTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>parsesAllPossibleErrors</td>
-<td>0.879</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>parsesInputAndProducesTypes</td>
-<td>0.501</td></tr>
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>compilesComplexSpec</td>
-<td>0.954</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>parsesAllSamples</td>
-<td>1.58</td></tr>
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>parsesAllPossibleCases</td>
-<td>0.981</td></tr>
+<td>1.443</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>reportsErrorsFound</td>
-<td>0.242</td></tr></table></div>
+<td>0.56</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>parsesAllPossibleErrors</td>
+<td>0.862</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>parsesAllPossibleCases</td>
+<td>0.931</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>compilesComplexSpec</td>
+<td>0.922</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>parsesInputAndProducesTypes</td>
+<td>0.504</td></tr></table></div>
 <div class="section">
 <h3>XeFlowTest<a name="XeFlowTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeFlowTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>avoidsDuplicateBindings</td>
-<td>0.35</td></tr>
+<td>0.086</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>manipulatesWithBindings</td>
-<td>0.35</td></tr></table></div>
+<td>0.088</td></tr></table></div>
 <div class="section">
 <h3>XeMethodTest<a name="XeMethodTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeMethodTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>avoidsDuplicateSteps</td>
-<td>0.351</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>createsNfr</td>
-<td>0.351</td></tr>
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>setsAttributes</td>
-<td>0.359</td></tr>
+<td>0.322</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>manipulatesWithMethod</td>
-<td>0.415</td></tr></table></div>
+<td>0.435</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>avoidsDuplicateSteps</td>
+<td>0.297</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>setsAttributes</td>
+<td>0.082</td></tr></table></div>
 <div class="section">
 <h3>XeOntologyTest<a name="XeOntologyTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeOntologyTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>manipulatesWithTypesAndUseCases</td>
-<td>0.378</td></tr>
+<td>avoidsDuplicationOfMethods</td>
+<td>0.284</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>avoidsDuplication</td>
-<td>0.35</td></tr>
+<td>manipulatesWithTypesAndUseCases</td>
+<td>0.357</td></tr>
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>avoidsDuplicationOfMethods</td>
-<td>0.334</td></tr></table></div>
+<td>avoidsDuplication</td>
+<td>0.311</td></tr></table></div>
 <div class="section">
 <h3>XeSignatureTest<a name="XeSignatureTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeSignatureTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>signsMethod</td>
-<td>0.297</td></tr></table></div>
+<td>0.288</td></tr></table></div>
 <div class="section">
 <h3>XeSlotTest<a name="XeSlotTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeSlotTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>manipulatesWithProperty</td>
-<td>0.358</td></tr></table></div>
+<td>0.363</td></tr></table></div>
 <div class="section">
 <h3>XeStepTest<a name="XeStepTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeStepTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>manipulatesWithSteps</td>
-<td>0.437</td></tr></table></div>
+<td>0.443</td></tr></table></div>
 <div class="section">
 <h3>XeTypeTest<a name="XeTypeTest"></a></h3><a name="org.requs.facet.syntax.ontologyXeTypeTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
 <td>manipulatesWithType</td>
-<td>0.391</td></tr></table></div><br /></div>
+<td>0.408</td></tr></table></div>
+<div class="section">
+<h3>PlantTest<a name="PlantTest"></a></h3><a name="org.requs.facet.umlPlantTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><a href="#org.requs.facet.uml.PlantTest.buildsSVG"><img src="images/icon_warning_sml.gif" alt="" /></a></td>
+<td><a href="#org.requs.facet.uml.PlantTest.buildsSVG">buildsSVG</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;org_requs_facet_uml_PlantTest_buildsSVG&apos;);"><span style="display:inline;" id="org_requs_facet_uml_PlantTest_buildsSVGoff"> + </span><span style="display:none;" id="org_requs_facet_uml_PlantTest_buildsSVGon"> - </span>[ Detail ]</a></div></td>
+<td>0</td></tr>
+<tr class="b">
+<td></td>
+<td>skipped</td>
+<td></td></tr></table></div><br /></div>
+<div class="section">
+<h2>Failure Details<a name="Failure_Details"></a></h2><a name="Failure_Details"></a>
+<p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" /></td>
+<td><a name="org.requs.CompilerTest.parsesAllSamples"></a>parsesAllSamples</td></tr>
+<tr class="b">
+<td></td>
+<td>skipped: skipped</td></tr>
+<tr class="a">
+<td><img src="images/icon_warning_sml.gif" alt="" /></td>
+<td><a name="org.requs.facet.uml.PlantTest.buildsSVG"></a>buildsSVG</td></tr>
+<tr class="b">
+<td></td>
+<td>skipped: skipped</td></tr></table><br /></div>
                             <img class="maven-logo" src="//img.jcabi.com/built-by-maven.png" alt="built by maven"/>
                         </article>
                     </div>
