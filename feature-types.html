@@ -45,9 +45,15 @@ For example, these words are valid type names:
 to a private property of a Java class, for example. The syntax is simple,
 in <a href="http://en.wikipedia.org/wiki/Backus%E2%80%93Naur_Form">BNF</a>:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="err">&lt;type&gt; </span><span class="p">::</span><span class="err">= &lt;camel&gt; ( </span><span class="s">&quot;has&quot;</span><span class="err"> | </span><span class="s">&quot;needs&quot;</span><span class="err"> | </span><span class="s">&quot;requires&quot;</span><span class="err"> | </span><span class="s">&quot;includes&quot;</span><span class="err"> ) </span><span class="s">&quot;:&quot;</span><span class="err"> &lt;slots&gt; </span><span class="s">&quot;.&quot;</span>
-<span class="err">&lt;slots&gt; </span><span class="p">::</span><span class="err">= &lt;slot&gt; (  ( </span><span class="s">&quot;,&quot;</span><span class="err"> | </span><span class="s">&quot;;&quot;</span><span class="err"> | </span><span class="s">&quot;and&quot;</span><span class="err"> ) &lt;slot&gt; )*</span>
-<span class="err">&lt;slot&gt; </span><span class="p">::</span><span class="err">= &lt;name&gt; ( </span><span class="s">&quot;as&quot;</span><span class="err"> &lt;informal&gt; )?</span></code></pre></div>
+<div class="highlight"><pre><code class="text">&lt;type&gt; ::= &lt;camel&gt; ( &quot;has&quot; | &quot;needs&quot; | &quot;requires&quot; | &quot;includes&quot; ) &quot;:&quot; &lt;slots&gt; &quot;.&quot;
+&lt;slots&gt; ::= &lt;slot&gt; (  ( &quot;,&quot; | &quot;;&quot; | &quot;and&quot; ) &lt;slot&gt; )*
+&lt;slot&gt; ::= &lt;name&gt; ( &quot;as&quot; &lt;informal&gt; )?</code></pre></div>
+
+<h2 id="good-and-bad-types">Good and Bad Types</h2>
+
+<p>Very often we make mistakes when declaring a new type or
+modifying an existing one. Read them carefully and try to avoid
+in your SRS documents.</p>
 
       <footer class="footer">
         <p>

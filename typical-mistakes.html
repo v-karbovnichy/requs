@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="This article contains a list of most common mistakes made during SRS document development; try to avoid them" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="http://img.requs.org/logo-128x128.png">
+    <link rel="shortcut icon" href="//img.requs.org/logo-128x128.png" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.requs.org/rss.xml"/>
+    <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
+    <link rel="stylesheet" href="/css/layout.css?"/>
+    <link rel="canonical" href="//www.requs.org/typical-mistakes.html" />
+    <title>Typical Mistakes to Avoid</title>
+  </head>
+  <body>
+    <a href="https://github.com/you"><img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    <div class="wrapper">
+      <header class="header">
+        <p>
+          <a href="/">
+            <img src="//img.requs.org/logo-384x128.png" class="logo" alt="logo"/>
+          </a>
+        </p>
+      </header>
+      <h1>Typical Mistakes to Avoid</h1>
+      <p>Here is a list of most common mistakes made in SRS
+documents. Let&#39;s try to avoid them.</p>
+
+<h2 id="interface-is-not-a-type">Interface is not a Type</h2>
+
+<p>This is <strong>not</strong> correct:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="n">System</span><span class="err"> </span><span class="k">contains</span><span class="p">:</span>
+<span class="err">  login</span><span class="n">Page</span><span class="err"> </span><span class="s">&quot;where user can log in&quot;</span><span class="p">,</span>
+<span class="err">  API </span><span class="s">&quot;that allows users to retrieve data&quot;</span><span class="err">.</span></code></pre></div>
+
+<p>Neither login page nor API are slots of the system. They are not slots
+at all. They are <strong>interfaces</strong>. Well, API is an interface and login page
+is a property of some interface (probably a web UI).</p>
+
+<p>In order to define interfaces you should use non-functional requirements:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="err">UC1/UI </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;contain a login page, where use can log in&quot;</span><span class="err">.</span>
+<span class="err">UC2/API </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;be accessible through API that allows users to retrieve data&quot;</span><span class="err">.</span></code></pre></div>
+
+<p>Then, you can explain interfaces even further, forwarding a reader
+to supplementary pages:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="err">UC1/UI </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;comply to WebUI&quot;</span><span class="err">.</span>
+<span class="n">Web</span><span class="err">UI</span><span class="p">:</span><span class="err"> &quot;&quot;</span><span class="s">&quot;</span>
+<span class="s">Long description of the web UI, with images and mock screens...</span>
+<span class="s">&quot;</span><span class="err">&quot;&quot;</span></code></pre></div>
+
+<p>It is totally OK to have long informal descriptions of interfaces.</p>
+
+<h2 id="avoid-comments-and-todo">Avoid Comments and TODO</h2>
+
+<p>The first slot in this example is correct, while the second one is wrong:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="n">Employee</span><span class="err"> </span><span class="k">contains</span><span class="p">:</span>
+<span class="err">  name </span><span class="s">&quot;first and last name or a nick name or maybe an empty field&quot;</span><span class="p">,</span>
+<span class="err">  email </span><span class="s">&quot;an address (@todo check whether we should obey RFC 5322)&quot;</span><span class="err">.</span></code></pre></div>
+
+<p>It is totally correct to give unclear and ambiguous definitions
+inside informal texts. That&#39;s exactly what they are for! Using this
+specification a programmer will be able to implement the name of
+employee, because it has all the information he needs. If this information
+is not sufficient enough and he will need a more precise and correct
+definition, he will submit a bug.</p>
+
+<p>The second slot will make a programmer stuck &mdash; can I implement
+it already or I should wait for someone doing this checking? Should
+I submit a bug? Or it was already submitted?</p>
+
+<p>Again, informal texts <strong>are</strong> todo-s. No need to define todo-s inside
+todo-s.</p>
+
+<h2 id="avoid-over-specifying">Avoid Over-Specifying</h2>
+
+<p>SRS document is not intended to become a complete description of
+the system for programmers and architects. Instead, the SRS should
+describe <strong>as little as possible</strong>. This use case is definitely
+wrong:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="err">UC5 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) logs in</span><span class="p">:</span>
+<span class="err">  1. </span><span class="k">The</span><span class="err"> user </span><span class="s">&quot;clicks LOGIN button&quot;</span><span class="p">;</span>
+<span class="err">  2. </span><span class="k">The</span><span class="err"> user </span><span class="s">&quot;enters email and password&quot;</span><span class="p">;</span>
+<span class="err">  3. </span><span class="k">The</span><span class="err"> user </span><span class="s">&quot;clicks SUBMIT button&quot;</span><span class="err">.</span></code></pre></div>
+
+<p>This use case restricts system implementers. It gives too many
+details about the login flow, while none of these requirements were
+actually provided by the product owner. The product owner doesn&#39;t
+care about this specific flow. All he wants is to have an ability
+for his users to log into the system. How exactly will it happen,
+he doesn&#39;t really care.</p>
+
+<p>Providing so many extra details in the SRS makes the document
+less readable and much more vague.</p>
+
+      <footer class="footer">
+        <p>
+          &copy; <span itemprop="author">requs.org</span>, 2009-2014
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
