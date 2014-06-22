@@ -1,242 +1,133 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>requs - Attributes and Seals</title>
-        <link media="all" rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
-        <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
-                    <meta name="author" content="Yegor Bugayenko" />
-                            <script>
-                var _gaq = _gaq || [];
-                _gaq.push(['_setAccount', 'UA-1963507-31']);
-                _gaq.push(['_trackPageview']);
-                (function() {
-                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-                })();
-            </script>
-                                                                                                                
-<link rel="shortcut icon" href="http://img.requs.org/logo-128x128.png"/>
-                                            <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-        <script>
-            $(document).ready(
-                function() {
-                    $(".menu-button").click(
-                        function() {
-                            if ($("#here-goes-menu").attr("class") == "menu-off") {
-                                $("#menu").clone().attr("class", "mobile-menu").appendTo("#here-goes-menu");
-                                $("#here-goes-menu").attr("class", "menu-on");
-                            } else {
-                                $(".mobile-menu").hide();
-                                $("#here-goes-menu").attr("class", "menu-off");
-                            }
-                        }
-                    );
-                }
-            );
-        </script>
-    </head>
-    <body>
-                <section class="page" itemscope="" itemtype="http://schema.org/BlogPosting">
-            <nav class="menu-section" role="navigation">
-                <ul class="menu" id="menu">
-                                                                                    <li>
-                            Overview
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="index.html" title="Introduction">Introduction</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="syntax.html" title="Requs Syntax">Requs Syntax</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="https://github.com/teamed/requs/releases" title="Release History">Release History</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Features
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="feature-types.html" title="Types and Slots">Types and Slots</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li  class='active' >
-                            <span>                        <a href="feature-attributes.html" title="Attributes and Seals">Attributes and Seals</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="feature-nfrs.html" title="Non-Functional Requirements">Non-Functional Requirements</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Examples
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="example-facebook.html" title="Facebook SRS">Facebook SRS</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Modules
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="requs-core/index.html" title="requs-core">requs-core</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="requs-exec/index.html" title="requs-exec">requs-exec</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="requs-demo/index.html" title="requs-demo">requs-demo</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="requs-maven-plugin/index.html" title="requs-maven-plugin">requs-maven-plugin</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Project Documentation
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="project-info.html" title="Project Information">Project Information</a>
-        </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="project-reports.html" title="Project Reports">Project Reports</a>
-        </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                    </ul>
-            </nav>
-            <div class="right-side">
-                <main role="main">
-                    <div class="content">
-                        <header>
-                            <i class="menu-button fa fa-align-justify"></i>
-                            <div class="logo">
-                                <a href="./"
-                                    title=" logo ">
-                                    <img src="http://img.requs.org/logo-128x128.png"
-                                        alt="requs"
-                                                                                    width="64"
-                                                                                                                            height="64"
-                                                                                itemprop="image"
-                                    />
-                                </a>
-                            </div>
-                            <div class="date">
-                                <div class="date-numbers">
-                                    <strong itemprop="version">1.11</strong>
-                                    
-                                    <time itemprop="datePublished" datetime="2014-06-15T10:55:39Z">
-                                        
-                                        15-Jun-2014
-                                    </time>
-                                </div>
-                                                                                                    <div>
-                                        <iframe src="http://ghbtns.com/github-btn.html?user=teamed&amp;repo=requs&amp;type=watch&amp;count=true&amp;size=large"
-                                            style="border-width:0px;overflow:hidden;width:170px;height:30px;">
-                                        </iframe>
-                                    </div>
-                                                            </div>
-                            <div id="here-goes-menu" class="menu-off"></div>
-                        </header>
-                        <article role="article" itemprop="articleBody">
-                            <!-- This source file is subject to the new BSD license that is bundled --><!-- with this package in the file LICENSE.txt. It is also available --><!-- through the world-wide-web at this URL: http://www.requs.org/LICENSE.txt --><!-- If you did not receive a copy of the license and are unable to --><!-- obtain it through the world-wide-web, please send an email --><!-- to license@requs.org so we can send you a copy immediately. --><!--  --><!-- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS --><!-- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT --><!-- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS --><!-- FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE --><!-- COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, --><!-- INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, --><!-- BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS --><!-- OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED --><!-- AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, --><!-- OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT --><!-- OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY --><!-- OF SUCH DAMAGE. --><div class="section">
-<h2>Attributes and Seals<a name="Attributes_and_Seals"></a></h2>
-<p>Any use case may have attributes assigned to it. Attribute is a small-caps English word, without spaces or numbers inside. For example:</p>
-<div class="source">
-<pre>:UC3.2 is a must.
-:UC8 is delivered.</pre></div>
-<p>In this example, <tt>must</tt> is an attribute of <tt>UC3.2</tt> and <tt>delivered</tt> is an attribute of <tt>UC8</tt>.</p>
-<p>We recommend to use attributes for requirements prioritization, according to <a class="externalLink" href="http://en.wikipedia.org/wiki/MoSCoW_method">MoSCoW method</a>:</p>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Requs is a controlled natural language (CNL) for software requirements specification" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="http://img.requs.org/logo-128x128.png">
+    <link rel="shortcut icon" href="//img.requs.org/logo-128x128.png" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.requs.org/rss.xml"/>
+    <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
+    <link rel="stylesheet" href="/css/layout.css?"/>
+    <link rel="canonical" href="//www.requs.org/feature-attributes.html" />
+    <title>Requirement Attributes and Seals</title>
+  </head>
+  <body>
+    <a href="https://github.com/you"><img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    <div class="wrapper">
+      <header class="header">
+        <p>
+          <a href="/">
+            <img src="//img.requs.org/logo-384x128.png" class="logo" alt="logo"/>
+          </a>
+        </p>
+      </header>
+      <h1>Requirement Attributes and Seals</h1>
+      <p>Any use case may have attributes assigned to it. Attribute
+is a small-caps English word, without spaces or numbers inside.
+For example:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="p">:</span><span class="err">UC3.2 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span>
+<span class="p">:</span><span class="err">UC8 </span><span class="k">is</span><span class="err"> delivered.</span></code></pre></div>
+
+<p>In this example, <code>must</code> is an attribute of <code>UC3.2</code> and
+<code>delivered</code> is an attribute of <code>UC8</code>.</p>
+
+<p>We recommend to use attributes for requirements prioritization,
+according to <a href="http://en.wikipedia.org/wiki/MoSCoW_method">MoSCoW method</a>:</p>
+
 <ul>
-<li><tt>must</tt></li>
-<li><tt>should</tt></li>
-<li><tt>could</tt></li>
-<li><tt>would</tt></li></ul>
-<p>We also recommend to use attributes for <a class="externalLink" href="http://en.wikipedia.org/wiki/Requirement_prioritization">requirements prioritization</a>:</p>
+<li><p><code>must</code></p></li>
+<li><p><code>should</code></p></li>
+<li><p><code>could</code></p></li>
+<li><p><code>would</code></p></li>
+</ul>
+
+<p>We also recommend to use attributes for
+<a href="http://en.wikipedia.org/wiki/Requirement_prioritization">requirements prioritization</a>:</p>
+
 <ul>
-<li><tt>specified</tt></li>
-<li><tt>implemented</tt></li>
-<li><tt>delivered</tt></li>
-<li><tt>accepted</tt></li></ul>
-<div class="section">
-<h3>Seals<a name="Seals"></a></h3>
-<p>When attribute is specified, it is possible to &quot;seal&quot; it. A seal is a 6-signs <a class="externalLink" href="http://en.wikipedia.org/wiki/Hexadecimal">hexadecimal</a> number, calculated by Requs engine, as an <a class="externalLink" href="http://en.wikipedia.org/wiki/MD5">MD5</a> hash function of the use case content.</p>
+<li><p><code>specified</code></p></li>
+<li><p><code>implemented</code></p></li>
+<li><p><code>delivered</code></p></li>
+<li><p><code>accepted</code></p>
+
+<ul>
+<li>Seals</li>
+</ul></li>
+</ul>
+
+<p>When attribute is specified, it is possible to &quot;seal&quot; it. A seal is
+a 6-signs <a href="http://en.wikipedia.org/wiki/Hexadecimal">hexadecimal</a>
+number, calculated by Requs engine, as an
+<a href="http://en.wikipedia.org/wiki/MD5">MD5</a> hash function of the use
+case content.</p>
+
 <p>For example, these two use cases will have two different seals:</p>
-<div class="source">
-<pre>UC3 where nothing happens: &quot;tbd&quot;.
-UC3 where nothing really happens: &quot;tbd&quot;.</pre></div>
-<p>Their signatures are different, that's why their seals are also different.</p>
-<p>In order to calculate a seal for your use case, just add a random seal (for example, <tt>ffffff</tt>) and run <tt>mvn requs:compile</tt>:</p>
-<div class="source">
-<pre>ffffff:UC3 is a must.</pre></div>
+
+<div class="highlight"><pre><code class="requs"><span class="err">UC3 </span><span class="k">where</span><span class="err"> nothing happens</span><span class="p">:</span><span class="err"> </span><span class="s">&quot;tbd&quot;</span><span class="err">.</span>
+<span class="err">UC3 </span><span class="k">where</span><span class="err"> nothing really happens</span><span class="p">:</span><span class="err"> </span><span class="s">&quot;tbd&quot;</span><span class="err">.</span></code></pre></div>
+
+<p>Their signatures are different, that&#39;s why their seals are also different.</p>
+
+<p>In order to calculate a seal for your use case, just add
+a random seal (for example, <code>ffffff</code>)
+and run <code>mvn requs:compile</code>:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="err">ffffff</span><span class="p">:</span><span class="err">UC3 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span></code></pre></div>
+
 <p>You will get an error message, similar to this:</p>
-<div class="source">
-<pre>[ERROR] 17:0 Seal &quot;2edb8f&quot; at the method UC3 doesn't match &quot;ffffff&quot; at the attribute &quot;must&quot;</pre></div>
-<p>The message means that Requs engine is expecting <tt>2edb8f</tt> as a seal for all <tt>UC3</tt> attributes. We set it to <tt>ffffff</tt> --- this breaks the build and makes our Requs specification in-compilable.</p>
-<p>Now, we can change <tt>ffffff</tt> to <tt>2edb8f</tt> in the specification and Requs won't complain any more.</p>
-<p>When, in the future, someone changes the content of <tt>UC3</tt>, they will break the build and will have to change the seal for all attributes.</p></div>
-<div class="section">
-<h3>Baselined Attributes<a name="Baselined_Attributes"></a></h3>
-<p>This mechanism exists in Requs in order to be able to <a class="externalLink" href="http://en.wikipedia.org/wiki/Baseline_%28configuration_management%29">baseline</a> individual requirements in a continuously changing document.</p>
-<p>Say, use case <tt>UC3</tt> is already implemented and delivered to the product owner. It has an attribute <tt>delivered</tt> in the SRS, and this attribute is sealed.</p>
-<p>Then, someone is changing the description of <tt>UC3</tt>. The seal doesn't work any more and Requs starts complaining. In order to make the build clean again, the author of these changes has to remove the seal from the document.</p>
-<p><tt>UC3</tt> doesn't have a seal any more. It is clear for the project manager, that this use case needs to be implemented and delivered to the product owner again.</p>
-<p>Thus, being a system analyst working with the SRS, be aware that if any seal doesn't match its expected value after your changes, you should just remove the seal.</p></div>
-<div class="section">
-<h3>Who Seals Use Cases?<a name="Who_Seals_Use_Cases"></a></h3>
-<p>Seals are supposed to be placed in the SRS by a project manager. Well, not necessarily a PM, but a person who is responsible for changing statuses or priorities of requirements.</p>
-<p>Usually it happens on project milestones, when priorities are set and requirements are baselined.</p></div></div>
-                            <img class="maven-logo" src="//img.jcabi.com/built-by-maven.png" alt="built by maven"/>
-                        </article>
-                    </div>
-                </main>
-                <footer class="legal-notes">
-                    <div>
-                        Copyright &#169;
-                                                                            2009-2014
-                                            </div>
-                    <div>requs.org, All Rights Reserved.</div>
-                    <div><a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.</div>
-                </footer>
-            </div>
-        </section>
-    </body>
+
+<div class="highlight"><pre><code class="text">[ERROR] 17:0 Seal &quot;2edb8f&quot; at the method UC3 doesn&#39;t match &quot;ffffff&quot; at the attribute &quot;must&quot;</code></pre></div>
+
+<p>The message means that Requs engine is expecting <code>2edb8f</code> as
+a seal for all <code>UC3</code> attributes. We set it to <code>ffffff</code> --- this
+breaks the build and makes our Requs specification in-compilable.</p>
+
+<p>Now, we can change <code>ffffff</code> to <code>2edb8f</code> in the specification
+and Requs won&#39;t complain any more.</p>
+
+<p>When, in the future, someone changes the content of <code>UC3</code>, they will
+break the build and will have to change the seal for all attributes.</p>
+
+<h2 id="baselined-attributes">Baselined Attributes</h2>
+
+<p>This mechanism exists in Requs in order to be able to
+<a href="http://en.wikipedia.org/wiki/Baseline_%28configuration_management%29">baseline</a>
+individual requirements in a continuously changing document.</p>
+
+<p>Say, use case <code>UC3</code> is already implemented and delivered to
+the product owner. It has an attribute <code>delivered</code> in the SRS,
+and this attribute is sealed.</p>
+
+<p>Then, someone is changing the description of <code>UC3</code>. The seal
+doesn&#39;t work any more and Requs starts complaining. In order to
+make the build clean again, the author of these changes has to
+remove the seal from the document.</p>
+
+<p><code>UC3</code> doesn&#39;t have a seal any more. It is clear for the project
+manager, that this use case needs to be implemented and delivered to the
+product owner again.</p>
+
+<p>Thus, being a system analyst working with the SRS, be aware that
+if any seal doesn&#39;t match its expected value after your changes,
+you should just remove the seal.</p>
+
+<h2 id="who-seals-use-cases?">Who Seals Use Cases?</h2>
+
+<p>Seals are supposed to be placed in the SRS by a project manager. Well,
+not necessarily a PM, but a person who is responsible for changing
+statuses or priorities of requirements.</p>
+
+<p>Usually it happens on project milestones, when priorities are set and
+requirements are baselined.</p>
+
+      <footer class="footer">
+        <p>
+          &copy; <span itemprop="author">requs.org</span>, 2009-2014
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>

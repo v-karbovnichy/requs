@@ -1,312 +1,275 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>requs - Requs Syntax</title>
-        <link media="all" rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
-        <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
-                    <meta name="author" content="Yegor Bugayenko" />
-                            <script>
-                var _gaq = _gaq || [];
-                _gaq.push(['_setAccount', 'UA-1963507-31']);
-                _gaq.push(['_trackPageview']);
-                (function() {
-                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-                })();
-            </script>
-                                                                                                                
-<link rel="shortcut icon" href="http://img.requs.org/logo-128x128.png"/>
-                                            <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-        <script>
-            $(document).ready(
-                function() {
-                    $(".menu-button").click(
-                        function() {
-                            if ($("#here-goes-menu").attr("class") == "menu-off") {
-                                $("#menu").clone().attr("class", "mobile-menu").appendTo("#here-goes-menu");
-                                $("#here-goes-menu").attr("class", "menu-on");
-                            } else {
-                                $(".mobile-menu").hide();
-                                $("#here-goes-menu").attr("class", "menu-off");
-                            }
-                        }
-                    );
-                }
-            );
-        </script>
-    </head>
-    <body>
-                <section class="page" itemscope="" itemtype="http://schema.org/BlogPosting">
-            <nav class="menu-section" role="navigation">
-                <ul class="menu" id="menu">
-                                                                                    <li>
-                            Overview
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="index.html" title="Introduction">Introduction</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li  class='active' >
-                            <span>                        <a href="syntax.html" title="Requs Syntax">Requs Syntax</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="https://github.com/teamed/requs/releases" title="Release History">Release History</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Features
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="feature-types.html" title="Types and Slots">Types and Slots</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="feature-attributes.html" title="Attributes and Seals">Attributes and Seals</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="feature-nfrs.html" title="Non-Functional Requirements">Non-Functional Requirements</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Examples
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="example-facebook.html" title="Facebook SRS">Facebook SRS</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Modules
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="requs-core/index.html" title="requs-core">requs-core</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="requs-exec/index.html" title="requs-exec">requs-exec</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="requs-demo/index.html" title="requs-demo">requs-demo</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="requs-maven-plugin/index.html" title="requs-maven-plugin">requs-maven-plugin</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Project Documentation
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="project-info.html" title="Project Information">Project Information</a>
-        </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="project-reports.html" title="Project Reports">Project Reports</a>
-        </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                    </ul>
-            </nav>
-            <div class="right-side">
-                <main role="main">
-                    <div class="content">
-                        <header>
-                            <i class="menu-button fa fa-align-justify"></i>
-                            <div class="logo">
-                                <a href="./"
-                                    title=" logo ">
-                                    <img src="http://img.requs.org/logo-128x128.png"
-                                        alt="requs"
-                                                                                    width="64"
-                                                                                                                            height="64"
-                                                                                itemprop="image"
-                                    />
-                                </a>
-                            </div>
-                            <div class="date">
-                                <div class="date-numbers">
-                                    <strong itemprop="version">1.11</strong>
-                                    
-                                    <time itemprop="datePublished" datetime="2014-06-15T10:55:39Z">
-                                        
-                                        15-Jun-2014
-                                    </time>
-                                </div>
-                                                                                                    <div>
-                                        <iframe src="http://ghbtns.com/github-btn.html?user=teamed&amp;repo=requs&amp;type=watch&amp;count=true&amp;size=large"
-                                            style="border-width:0px;overflow:hidden;width:170px;height:30px;">
-                                        </iframe>
-                                    </div>
-                                                            </div>
-                            <div id="here-goes-menu" class="menu-off"></div>
-                        </header>
-                        <article role="article" itemprop="articleBody">
-                            <!-- This source file is subject to the new BSD license that is bundled --><!-- with this package in the file LICENSE.txt. It is also available --><!-- through the world-wide-web at this URL: http://www.requs.org/LICENSE.txt --><!-- If you did not receive a copy of the license and are unable to --><!-- obtain it through the world-wide-web, please send an email --><!-- to license@requs.org so we can send you a copy immediately. --><!--  --><!-- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS --><!-- "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT --><!-- LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS --><!-- FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE --><!-- COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, --><!-- INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, --><!-- BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS --><!-- OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED --><!-- AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, --><!-- OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT --><!-- OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY --><!-- OF SUCH DAMAGE. --><div class="section">
-<h2>Requs Syntax<a name="Requs_Syntax"></a></h2>
-<p><a class="externalLink" href="http://standards.ieee.org/reading/ieee/std_public/description/se/830-1998_desc.html">IEEE 830-1998</a> says: &quot;SRS (<i>software requirements specification</i>) should be correct, unambiguous, complete, consistent, ranked for importance and/or stability, verifiable, modifiable, traceable&quot;. Requs is a Controlled Natural Language that enables the creation of such documents in plain text format.</p>
-<div class="section">
-<h3>Quick Start<a name="Quick_Start"></a></h3>
-<p>The scope definition document consists of <b>types</b> and <b>methods</b> (aka &quot;use cases&quot;). For example, there are two types (<tt>Visitor</tt> and <tt>Image</tt>) and one use case (<tt>UC3.2</tt>) defined in the snippet:</p>
-<div class="source">
-<pre>Visitor is &quot;an originator of HTTP request&quot;.
-UC3.2 where User (a user) deletes photos:
-  &quot;we will define it later...&quot;.
-Image includes: content, name, and size.</pre></div>
-<p>Anything inside double quotes is considered as informal content, which we take &quot;as is&quot;, without any attempt to understand what it means. You can double quote anything (except double quotes, of course), and you can place informal texts in any place of the document. They are ignored during formal Requs analysis.</p>
-<p>Let's consider a bigger example of a type <tt>Image</tt>:</p>
-<div class="source">
-<pre>Image includes:
-  content as File &quot;a binary content as defined by ISO-15948&quot;,
-  name as &quot;a unique alpha-numeric name of the image&quot;,
-  size as &quot;the total number of bytes in PNG content&quot;.</pre></div>
-<p>The semantic is the same -- the type still contains three <b>slots</b> (<tt>PNG content</tt>, <tt>name</tt> and <tt>size</tt>). However in this example we added an informal explanation to every one of them. An <tt>as</tt> keyword separates the name of the slot and its invariant.</p>
-<p>Pay attention to the dots, colons, semicolons and commas used above. Comma, semicolon and preposition <tt>and</tt> can replace each other. For example, the following declarations are semantically equivalent:</p>
-<div class="source">
-<pre>Image needs: content and name and size.
-Image needs: content, name, size.
-Image needs: content; name; and size.</pre></div>
-<p>By means of <tt>is</tt>/<tt>is a</tt> we enable a declaration of <b>invariants</b> on types. Invariant is a <b>predicate</b>, which is always true, no matter what happens with the system. In the example above it is always true that <tt>PNG content</tt> is a file with binary content (not a readable ASCII text). Nobody can break this invariant and put a textual information into this slot.</p>
-<p>As you noticed, an invariant can be declared with an informal text, as we've done with <tt>size</tt>. Such a declaration means absolutely nothing and will be ignored. But it helps when you're starting to develop the SRS document.</p>
-<p>In general, <b>informal texts</b> play an important role during the initial development of a requirements document and during a preliminary system analysis. When you don't know for sure how to define the information you have in a strict format -- you should use informal texts. Later, when you have more information, you will replace them.</p>
-<p>Requs is a case-insensitive language in all places except one -- type names should use <a class="externalLink" href="http://en.wikipedia.org/wiki/CamelCase">CamelCase Notation</a>. Thus, <tt>Fie</tt>, <tt>ImageFile</tt>, and <tt>VeryBigImageFile</tt> are valid type names, while <tt>imagefile</tt> is just an English word.</p></div>
-<div class="section">
-<h3>Bigger Example<a name="Bigger_Example"></a></h3>
-<p>To put things together we should declare a use case, which is a step-by-step explanation of interaction between instances of types (so called <b>objects</b>), for example:</p>
-<div class="source">
-<pre>UC8.1 where User (a user) shares Image with User (a friend):
-  1. The user creates Image (a photo);
-  2. The user updates the friend &quot;selecting one of his contacts&quot;;
-  3. The photo converts &quot;to the right PNG format, 600x600 maximum&quot;;
-  4. The friend receives email using SmtpServer (a server);
-  5. The friend reads the photo &quot;in his own web page&quot;.
-UC8.1/1 when &quot;the user exceeds the maximum possible number of photos&quot;:
-  1. Fail since &quot;photos limit exceeded&quot;.
-UC8.1/3 when &quot;invalid format&quot;:
-  1. &quot;We notify user about the problem&quot;;
-  2. Fail since &quot;can't convert photo&quot;.</pre></div>
-<p>First line in this example is a declaration of a use case, which number is <tt>UC8.1</tt>. The use case has a <b>signature</b>, which differentiates it from all other use cases. It is not the ID of the use case, but the signature, which is important. This concept is very similar to <a class="externalLink" href="http://en.wikipedia.org/wiki/Signature_(computer_science)">function signature</a> in programming. The signature of this use case is:</p>
-<div class="source">
-<pre>User shares Image with User</pre></div>
-<p>In order to include this use case into another one we should use this signature, filling it with particular objects. Objects start with article <tt>the</tt>. On their first occurrence they appear in round brackets and start with <tt>a</tt> or <tt>an</tt>.</p>
-<p>In our use case there are three objects: <tt>the user</tt>, <tt>the friend</tt> and <tt>the photo</tt>. An object could be either received by a use case or created inside it. However, there is no grammar difference between objects received and objects created. We assume that an object is empty until anyone updates or creates it (more on this later).</p>
-<p>There are seven <b>main flows</b> in this use case, and five <b>alternative flows</b>. Flows <tt>1</tt>, <tt>5</tt>, <tt>6</tt>, and <tt>7</tt> instruct us to include other use cases that match the signatures provided and pass them the objects we have.</p></div>
-<div class="section">
-<h3>USING<a name="USING"></a></h3>
-<p>In the example above, one of the use case steps mentioned <tt>using</tt> operator:</p>
-<div class="source">
-<pre>The friend receives email using SmtpServer (a server).</pre></div>
-<p>This is similar to sending arguments to a method. In this line we're calling a method &quot;receives&quot; on &quot;the friend&quot; object like this:</p>
-<div class="source">
-<pre>friend.receives_email(smtp_server);</pre></div>
-<p>Instead of <tt>using</tt> you can use <tt>of</tt> or <tt>with</tt>. These three keywords are reserved and can't be used as English words.</p></div>
-<div class="section">
-<h3>CRUDL<a name="CRUDL"></a></h3>
-<p>There are four use cases that are included by <tt>UC8.1</tt>. They have to be defined somewhere else in the document, otherwise the document will be semantically incomplete. But not all four are mandatory, because there is a number of <b>elementary use cases</b>, which are defined in the system, even if the document is empty. The elementary use cases are (<a class="externalLink" href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> requirements pattern):</p>
-<div class="source">
-<pre>Something creates something
-Something reads something
-Something updates something
-Something deletes something
-Something lists something</pre></div>
-<p>As you understand, <tt>something</tt> means &quot;object of any type&quot;. <tt>create</tt> means making/instantiating of a new object. <tt>read</tt> means reading of all and any slots of an object, and all their slots, etc. <tt>update</tt> means changing of values of slots of an object. <tt>delete</tt> means removing an object from a persistent storage.</p>
-<p>Thus, a valid flow either points us to another use case defined somewhere else in the document, or points us to an elementary use case, or points us nowhere with an informal text (<b>informal flow</b>).</p></div>
-<div class="section">
-<h3>Exceptions<a name="Exceptions"></a></h3>
-<p>Besides that, a flow might have a special instruction, which we've seen in alternative flow <tt>UC8.3/1</tt> and <tt>UC8.3/3</tt>. <tt>fail since</tt> means that a use case should be stopped at this point and the reason of this termination is explained right after the word <tt>since</tt> as an informal text.</p>
-<p>Reason of failure is used by a parent use case, which included the current one. This is exactly what happens in <tt>UC8.3/3</tt>. We are waiting for a failure from <tt>we convert the photo</tt>, and we're ready to accept a failure called <tt>invalid format</tt>. This approach is very similar to <a class="externalLink" href="http://en.wikipedia.org/wiki/Exception_handling">exception handling paradigm</a> in object-oriented languages.</p></div>
-<div class="section">
-<h3>Scope Ambiguity<a name="Scope_Ambiguity"></a></h3>
-<p>There is only one metric that tells us everything about the entire scope definition document. The metric is called &quot;<b>scope ambiguity</b>&quot; and is calculated like:</p>
-<div class="source">
-<pre>A = S / (S + M)</pre></div>
-<p><i>S</i> stands for a total number of all informal flows, and <i>M</i> is a total number of CRUD-manipulators. Thus, if <i>A</i> equals to 0, the document is absolutely non-ambiguous, which is an almost impossible situation. In real world projects the task of a system analyst is to move <i>A</i> from 1 to 0.</p></div>
-<div class="section">
-<h3>Arity of Slots<a name="Arity_of_Slots"></a></h3>
-<p>A slot may have an &quot;arity&quot;, determined by a suffix attached to its name. There are four possible options:</p>
-<div class="source">
-<pre>User includes: name, address-s, photo-s?, and SSN-?.</pre></div>
-<p><tt>-s</tt> means &quot;one or many&quot; or <tt>1..*</tt> in UML.</p>
-<p><tt>-?</tt> means &quot;zero or one&quot; or <tt>0..1</tt> in UML.</p>
-<p><tt>-s?</tt> means &quot;zero or many&quot; or <tt>0..*</tt> in UML.</p>
-<p>No suffix means exactly one, or <tt>1..1</tt> in UML.</p></div>
-<div class="section">
-<h3>Attributes<a name="Attributes"></a></h3>
-<p>Any use case may have attributes assigned to it. Attributes may be used, for example, for <a class="externalLink" href="http://en.wikipedia.org/wiki/Requirement_prioritization">requirements prioritization</a>.</p>
-<div class="source">
-<pre>:UC3.2 is a must.
-:UC8 is delivered.
-:UC2 is specified.</pre></div>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Requs is a controlled natural language (CNL) for software requirements specification" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" href="http://img.requs.org/logo-128x128.png">
+    <link rel="shortcut icon" href="//img.requs.org/logo-128x128.png" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.requs.org/rss.xml"/>
+    <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
+    <link rel="stylesheet" href="/css/layout.css?"/>
+    <link rel="canonical" href="//www.requs.org/syntax.html" />
+    <title>Requs Syntax</title>
+  </head>
+  <body>
+    <a href="https://github.com/you"><img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    <div class="wrapper">
+      <header class="header">
+        <p>
+          <a href="/">
+            <img src="//img.requs.org/logo-384x128.png" class="logo" alt="logo"/>
+          </a>
+        </p>
+      </header>
+      <h1>Requs Syntax</h1>
+      <p>The scope definition document consists of <em>types</em>
+and <em>methods</em> (aka &quot;use cases&quot;). For example, there are two types
+(<code>Visitor</code> and <code>Image</code>) and one
+use case (<code>UC3.2</code>) defined in the snippet:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="n">Visitor</span><span class="err"> </span><span class="k">is</span><span class="err"> </span><span class="s">&quot;an originator of HTTP request&quot;</span><span class="err">.</span>
+<span class="err">UC3.2 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) </span><span class="o">deletes</span><span class="err"> photos</span><span class="p">:</span>
+<span class="err">  </span><span class="s">&quot;we will define it later...&quot;</span><span class="err">.</span>
+<span class="n">Image</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span><span class="err"> content</span><span class="p">,</span><span class="err"> name</span><span class="p">,</span><span class="err"> </span><span class="k">and</span><span class="err"> size.</span></code></pre></div>
+
+<p>Anything inside double quotes is considered as
+informal content, which we take &quot;as is&quot;, without
+any attempt to understand what it means. You can double quote anything
+(except double quotes, of course), and you can place
+informal texts in any place of the document. They are ignored
+during formal Requs analysis.</p>
+
+<p>Let&#39;s consider a bigger example of a type <code>Image</code>:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="n">Image</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span>
+<span class="err">content </span><span class="k">as</span><span class="err"> </span><span class="n">File</span><span class="err"> </span><span class="s">&quot;a binary content as defined by ISO-15948&quot;</span><span class="p">,</span>
+<span class="err">name </span><span class="k">as</span><span class="err"> </span><span class="s">&quot;a unique alpha-numeric name of the image&quot;</span><span class="p">,</span>
+<span class="err">size </span><span class="k">as</span><span class="err"> </span><span class="s">&quot;the total number of bytes in PNG content&quot;</span><span class="err">.</span></code></pre></div>
+
+<p>The semantic is the same -- the type still contains three <em>slots</em>
+(<code>PNG content</code>, <code>name</code> and <code>size</code>). However
+in this example we added an informal explanation to every one of them.
+An <code>as</code> keyword separates the name of the slot and its invariant.</p>
+
+<p>Pay attention to the dots, colons, semicolons and commas used above.
+Comma, semicolon and preposition <code>and</code> can replace each other.
+For example, the following declarations are semantically equivalent:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="n">Image</span><span class="err"> </span><span class="k">needs</span><span class="p">:</span><span class="err"> content </span><span class="k">and</span><span class="err"> name </span><span class="k">and</span><span class="err"> size.</span>
+<span class="n">Image</span><span class="err"> </span><span class="k">needs</span><span class="p">:</span><span class="err"> content</span><span class="p">,</span><span class="err"> name</span><span class="p">,</span><span class="err"> size.</span>
+<span class="n">Image</span><span class="err"> </span><span class="k">needs</span><span class="p">:</span><span class="err"> content</span><span class="p">;</span><span class="err"> name</span><span class="p">;</span><span class="err"> </span><span class="k">and</span><span class="err"> size.</span></code></pre></div>
+
+<p>By means of <code>is</code>/<code>is a</code> we enable a declaration of <em>invariants</em>
+on types. Invariant is a <em>predicate</em>, which is always true, no matter
+what happens with the system. In the example above it is always true
+that <code>PNG content</code> is a file with binary content (not a readable
+ASCII text). Nobody can break this invariant and put a textual information
+into this slot.</p>
+
+<p>As you noticed, an invariant can be declared with an informal text, as we&#39;ve
+done with <code>size</code>. Such a declaration means
+absolutely nothing and will be ignored. But it helps when you&#39;re starting
+to develop the SRS document.</p>
+
+<p>In general, <em>informal texts</em> play an important role during the initial
+development of a requirements document and
+during a preliminary system analysis. When you don&#39;t know for sure
+how to define the information you have in a strict format -- you
+should use informal texts. Later, when you have more information,
+you will replace them.</p>
+
+<p>Requs is a case-insensitive language in all places
+except one -- type names should use
+<a href="http://en.wikipedia.org/wiki/CamelCase">CamelCase Notation</a>. Thus,
+<code>Fie</code>, <code>ImageFile</code>, and <code>VeryBigImageFile</code> are valid type
+names, while <code>imagefile</code> is just an English word.</p>
+
+<h2 id="bigger-example">Bigger Example</h2>
+
+<p>To put things together we should declare a use case, which is
+a step-by-step explanation of interaction between instances of types
+(so called <em>objects</em>), for example:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="err">UC8.1 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) shares </span><span class="n">Image</span><span class="err"> </span><span class="k">with</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> friend)</span><span class="p">:</span>
+<span class="err">1. </span><span class="k">The</span><span class="err"> user </span><span class="o">creates</span><span class="err"> </span><span class="n">Image</span><span class="err"> (</span><span class="k">a</span><span class="err"> photo)</span><span class="p">;</span>
+<span class="err">2. </span><span class="k">The</span><span class="err"> user </span><span class="o">updates</span><span class="err"> </span><span class="k">the</span><span class="err"> friend </span><span class="s">&quot;selecting one of his contacts&quot;</span><span class="p">;</span>
+<span class="err">3. </span><span class="k">The</span><span class="err"> photo converts </span><span class="s">&quot;to the right PNG format, 600x600 maximum&quot;</span><span class="p">;</span>
+<span class="err">4. </span><span class="k">The</span><span class="err"> friend receives email </span><span class="k">using</span><span class="err"> </span><span class="n">SmtpServer</span><span class="err"> (</span><span class="k">a</span><span class="err"> server)</span><span class="p">;</span>
+<span class="err">5. </span><span class="k">The</span><span class="err"> friend </span><span class="o">reads</span><span class="err"> </span><span class="k">the</span><span class="err"> photo </span><span class="s">&quot;in his own web page&quot;</span><span class="err">.</span>
+<span class="err">UC8.1/1 </span><span class="k">when</span><span class="err"> </span><span class="s">&quot;the user exceeds the maximum possible number of photos&quot;</span><span class="p">:</span>
+<span class="err">1. </span><span class="o">Fail since</span><span class="err"> </span><span class="s">&quot;photos limit exceeded&quot;</span><span class="err">.</span>
+<span class="err">UC8.1/3 </span><span class="k">when</span><span class="err"> </span><span class="s">&quot;invalid format&quot;</span><span class="p">:</span>
+<span class="err">1. </span><span class="s">&quot;We notify user about the problem&quot;</span><span class="p">;</span>
+<span class="err">2. </span><span class="o">Fail since</span><span class="err"> </span><span class="s">&quot;can&#39;t convert photo&quot;</span><span class="err">.</span></code></pre></div>
+
+<p>First line in this example is a declaration of a use case,
+which number is <code>UC8.1</code>. The use case has a <em>signature</em>,
+which differentiates it from all other use cases. It is not the
+ID of the use case, but the signature, which is important. This
+concept is very similar to
+<a href="http://en.wikipedia.org/wiki/Signature_(computer_science)">function signature</a>
+in programming. The signature of this use case is:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="n">User</span><span class="err"> shares </span><span class="n">Image</span><span class="err"> </span><span class="k">with</span><span class="err"> </span><span class="n">User</span></code></pre></div>
+
+<p>In order to include this use case into another one we should use this
+signature, filling it with particular objects. Objects start with
+article <code>the</code>. On their first occurrence they appear in round brackets
+and start with <code>a</code> or <code>an</code>.</p>
+
+<p>In our use case there are three objects: <code>the user</code>,
+<code>the friend</code> and <code>the photo</code>. An object could be
+either received by a use case or created inside it. However, there is no grammar
+difference between objects received and objects created. We assume
+that an object is empty until anyone updates or creates it (more on this later).</p>
+
+<p>There are seven <em>main flows</em> in this use case, and five <em>alternative
+flows</em>. Flows <code>1</code>, <code>5</code>, <code>6</code>, and <code>7</code>
+instruct us to include other use cases that match the signatures
+provided and pass them the objects we have.</p>
+
+<h2 id="using">USING</h2>
+
+<p>In the example above, one of the use case steps
+mentioned <code>using</code> operator:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="k">The</span><span class="err"> friend receives email </span><span class="k">using</span><span class="err"> </span><span class="n">SmtpServer</span><span class="err"> (</span><span class="k">a</span><span class="err"> server).</span></code></pre></div>
+
+<p>This is similar to sending arguments to a method. In this line
+we&#39;re calling a method &quot;receives&quot; on &quot;the friend&quot; object like this:</p>
+
+<div class="highlight"><pre><code class="java"><span class="n">friend</span><span class="o">.</span><span class="na">receives_email</span><span class="o">(</span><span class="n">smtp_server</span><span class="o">);</span></code></pre></div>
+
+<p>Instead of <code>using</code> you can use <code>of</code> or <code>with</code>. These three
+keywords are reserved and can&#39;t be used as English words.</p>
+
+<h2 id="crudl">CRUDL</h2>
+
+<p>There are four use cases that are included by <code>UC8.1</code>.
+They have to be defined somewhere else in the document,
+otherwise the document will be semantically incomplete. But not all four are
+mandatory, because there is a number of <em>elementary use cases</em>,
+which are defined in the system, even if the document is
+empty. The elementary use cases are
+(<a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> requirements pattern):</p>
+
+<div class="highlight"><pre><code class="requs"><span class="n">Something</span><span class="err"> </span><span class="o">creates</span><span class="err"> something</span>
+<span class="n">Something</span><span class="err"> </span><span class="o">reads</span><span class="err"> something</span>
+<span class="n">Something</span><span class="err"> </span><span class="o">updates</span><span class="err"> something</span>
+<span class="n">Something</span><span class="err"> </span><span class="o">deletes</span><span class="err"> something</span>
+<span class="n">Something</span><span class="err"> </span><span class="o">lists</span><span class="err"> something</span></code></pre></div>
+
+<p>As you understand, <code>something</code> means &quot;object of any type&quot;.
+<code>create</code> means making/instantiating of a new object.
+<code>read</code> means reading of all and any slots of an object, and all their slots, etc.
+<code>update</code> means changing of values of slots of an object.
+<code>delete</code> means removing an object from a persistent storage.</p>
+
+<p>Thus, a valid flow either points us to another use case
+defined somewhere else in the document, or points us to
+an elementary use case, or points us nowhere with an informal text
+(<em>informal flow</em>).</p>
+
+<h2 id="exceptions">Exceptions</h2>
+
+<p>Besides that, a flow might have a special instruction, which we&#39;ve seen
+in alternative flow <code>UC8.3/1</code> and <code>UC8.3/3</code>. <code>fail since</code>
+means that a use case should be stopped at this point and the
+reason of this termination is explained right after the word <code>since</code>
+as an informal text.</p>
+
+<p>Reason of failure is used by a parent use case, which included the
+current one. This is exactly what happens in <code>UC8.3/3</code>. We are
+waiting for a failure from <code>we convert the photo</code>, and
+we&#39;re ready to accept a failure called <code>invalid format</code>.
+This approach is very similar to
+<a href="http://en.wikipedia.org/wiki/Exception_handling">exception handling paradigm</a>
+in object-oriented languages.</p>
+
+<h2 id="scope-ambiguity">Scope Ambiguity</h2>
+
+<p>There is only one metric that tells us everything about
+the entire scope definition document. The metric is called
+&quot;<em>scope ambiguity</em>&quot; and is calculated like:</p>
+
+<div class="highlight"><pre><code class="text">A = S / (S + M)</code></pre></div>
+
+<p><code>S</code> stands for a total number of all informal flows,
+and <code>M</code> is a total number of CRUD-manipulators.
+Thus, if <code>A</code> equals to 0, the document is absolutely non-ambiguous,
+which is an almost impossible situation. In real world projects
+the task of a system analyst is to move <code>A</code> from 1 to 0.</p>
+
+<h2 id="arity-of-slots">Arity of Slots</h2>
+
+<p>A slot may have an &quot;arity&quot;, determined by a suffix attached to its name. There
+are four possible options:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="n">User</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span><span class="err"> name</span><span class="p">,</span><span class="err"> address-s</span><span class="p">,</span><span class="err"> photo-s?</span><span class="p">,</span><span class="err"> </span><span class="k">and</span><span class="err"> SSN-?.</span></code></pre></div>
+
+<p><code>-s</code> means &quot;one or many&quot; or <code>1..*</code> in UML.</p>
+
+<p><code>-?</code> means &quot;zero or one&quot; or <code>0..1</code> in UML.</p>
+
+<p><code>-s?</code> means &quot;zero or many&quot; or <code>0..*</code> in UML.</p>
+
+<p>No suffix means exactly one, or <code>1..1</code> in UML.</p>
+
+<h2 id="attributes">Attributes</h2>
+
+<p>Any use case may have attributes assigned to it. Attributes
+may be used, for example, for
+<a href="http://en.wikipedia.org/wiki/Requirement_prioritization">requirements prioritization</a>.</p>
+
+<div class="highlight"><pre><code class="requs"><span class="p">:</span><span class="err">UC3.2 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span>
+<span class="p">:</span><span class="err">UC8 </span><span class="k">is</span><span class="err"> delivered.</span>
+<span class="p">:</span><span class="err">UC2 </span><span class="k">is</span><span class="err"> specified.</span></code></pre></div>
+
 <p>You can &quot;seal&quot; your statement with a hash code:</p>
-<div class="source">
-<pre>af63e2:UC3.2 is a must.</pre></div>
-<p>This hash code <tt>af63e2</tt> is calculated from the content of <tt>UC3.2</tt>. If the content is changed, this statement becomes invalid and the entire document can't be compiled any more.</p>
-<p>More about it in <a href="./feature-attributes.html">Attributes and Seals</a>.</p></div>
-<div class="section">
-<h3>Non-Functional Requirements<a name="Non-Functional_Requirements"></a></h3>
-<p>To any use case you can add a number of non-functional requirements (NFR), in the following format:</p>
-<div class="source">
-<pre>UC3.2/MTBF must &quot;be 5 minutes on a standard equipment&quot;.
-UC7/PERF must &quot;be less than 500 msec per request&quot;.</pre></div>
-<p>After the name of the use case you put a forward slash and then a mnemonic name of a non-functional requirement. Then, you put &quot;must be&quot; and an informal text.</p>
-<p>More about it in <a href="./feature-nfrs.html">Non-Functional Requirements</a>.</p></div>
-<div class="section">
-<h3>Markdown Pages<a name="Markdown_Pages"></a></h3>
-<p>Sometimes you may need to add informal pages to your SRS document. For example, Vision, Business Case, wireframes, UI mockups, tables, research results, supplementary tables, etc. The syntax is simple:</p>
-<div class="source">
-<pre>Vision: &quot;&quot;&quot;
-Any text you wish, in Markdown format.
-&quot;&quot;&quot;.</pre></div>
+
+<div class="highlight"><pre><code class="requs"><span class="err">af63e2</span><span class="p">:</span><span class="err">UC3.2 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span></code></pre></div>
+
+<p>This hash code <code>af63e2</code> is calculated from the content of <code>UC3.2</code>.
+If the content is changed, this statement becomes invalid and the entire
+document can&#39;t be compiled any more.</p>
+
+<p>More about it in <a href="/feature-attributes.html">Attributes and Seals</a>.</p>
+
+<h2 id="non-functional-requirements">Non-Functional Requirements</h2>
+
+<p>To any use case you can add a number of non-functional requirements (NFR),
+in the following format:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="err">UC3.2/MTBF </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;be 5 minutes on a standard equipment&quot;</span><span class="err">.</span>
+<span class="err">UC7/PERF </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;be less than 500 msec per request&quot;</span><span class="err">.</span></code></pre></div>
+
+<p>After the name of the use case you put a forward slash and then
+a mnemonic name of a non-functional requirement. Then, you put
+&quot;must be&quot; and an informal text.</p>
+
+<p>More about it in <a href="/feature-nfrs.html">Non-Functional Requirements</a>.</p>
+
+<h2 id="markdown-pages">Markdown Pages</h2>
+
+<p>Sometimes you may need to add informal pages to your SRS document. For
+example, Vision, Business Case, wireframes, UI mockups, tables,
+research results, supplementary tables, etc. The syntax is simple:</p>
+
+<div class="highlight"><pre><code class="requs"><span class="n">Vision</span><span class="p">:</span><span class="err"> &quot;&quot;</span><span class="s">&quot;</span>
+<span class="s">Any text you wish, in Markdown format.</span>
+<span class="s">&quot;</span><span class="err">&quot;&quot;.</span></code></pre></div>
+
 <p>Page name should be in CamelCase, as well as type name.</p>
-<p>Read on <a class="externalLink" href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a>.</p></div></div>
-                            <img class="maven-logo" src="//img.jcabi.com/built-by-maven.png" alt="built by maven"/>
-                        </article>
-                    </div>
-                </main>
-                <footer class="legal-notes">
-                    <div>
-                        Copyright &#169;
-                                                                            2009-2014
-                                            </div>
-                    <div>requs.org, All Rights Reserved.</div>
-                    <div><a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.</div>
-                </footer>
-            </div>
-        </section>
-    </body>
+
+<p>Read on <a href="http://daringfireball.net/projects/markdown/syntax">Markdown syntax</a>.</p>
+
+      <footer class="footer">
+        <p>
+          &copy; <span itemprop="author">requs.org</span>, 2009-2014
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
