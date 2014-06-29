@@ -5,8 +5,8 @@
     <meta name="description" content="This article contains a list of most common mistakes made during SRS document development; try to avoid them" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" type="image/png" href="http://img.requs.org/logo-128x128.png">
-    <link rel="shortcut icon" href="//img.requs.org/logo-128x128.png" />
+    <link rel="icon" type="image/png" href="http://img.requs.org/ico-64x64.png">
+    <link rel="shortcut icon" href="//img.requs.org/ico-64x64.png" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.requs.org/rss.xml"/>
     <link rel="author" href="//plus.google.com/u/0/114792568016408327418?rel=author" />
     <link rel="stylesheet" href="/css/layout.css?"/>
@@ -14,7 +14,7 @@
     <title>Typical Mistakes to Avoid</title>
   </head>
   <body>
-    <a href="https://github.com/you"><img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    <a href="https://github.com/teamed/requs"><img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
     <div class="wrapper">
       <header class="header">
         <p>
@@ -32,7 +32,7 @@ documents. Let&#39;s try to avoid them.</p>
 <p>This is <strong>not</strong> correct:</p>
 
 <div class="highlight"><pre><code class="requs"><span class="n">System</span><span class="err"> </span><span class="k">contains</span><span class="p">:</span>
-<span class="err">  login</span><span class="n">Page</span><span class="err"> </span><span class="s">&quot;where user can log in&quot;</span><span class="p">,</span>
+<span class="err">  loginPage </span><span class="s">&quot;where user can log in&quot;</span><span class="p">,</span>
 <span class="err">  API </span><span class="s">&quot;that allows users to retrieve data&quot;</span><span class="err">.</span></code></pre></div>
 
 <p>Neither login page nor API are slots of the system. They are not slots
@@ -48,7 +48,7 @@ is a property of some interface (probably a web UI).</p>
 to supplementary pages:</p>
 
 <div class="highlight"><pre><code class="requs"><span class="err">UC1/UI </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;comply to WebUI&quot;</span><span class="err">.</span>
-<span class="n">Web</span><span class="err">UI</span><span class="p">:</span><span class="err"> &quot;&quot;</span><span class="s">&quot;</span>
+<span class="err">WebUI</span><span class="p">:</span><span class="err"> &quot;&quot;</span><span class="s">&quot;</span>
 <span class="s">Long description of the web UI, with images and mock screens...</span>
 <span class="s">&quot;</span><span class="err">&quot;&quot;</span></code></pre></div>
 
