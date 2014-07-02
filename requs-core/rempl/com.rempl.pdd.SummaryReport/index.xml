@@ -1,12 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet type='text/xsl' href='puzzles.xsl'?><puzzles>
-<puzzle>
-<ticket>38</ticket>
-<file>src/test/java/org/requs/facet/uml/PlantTest.java</file>
-<prefix>     * </prefix>
-<body>PlantUML produces broken SVG. It sets empty XMLNS to all child nodes of SVG element. Because of that the image is not renderable in browsers. I'm not sure how to fix that. Maybe the best way would be to report a bug to PlantUML, and ask them to fix the root cause. However, I'm not entirely sure they have a bug, since their command line tool works fine, in the same version 7999. Maybe it's a problem in our DOM implementation, or its integration with PlantUML. Let's investigate and fix.</body>
-<estimate>0</estimate>
-<lines>49-56</lines>
-<owner>someone</owner>
-</puzzle>
-</puzzles>
+<?xml-stylesheet type='text/xsl' href='puzzles.xsl'?><puzzles/>
