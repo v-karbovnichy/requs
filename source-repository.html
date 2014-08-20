@@ -1,238 +1,116 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>requs - Source Repository</title>
-        <link media="all" rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
-        <link media="all" rel="stylesheet" type="text/css" href="./css/jcabi.css"/>
-                            <script>
-                var _gaq = _gaq || [];
-                _gaq.push(['_setAccount', 'UA-1963507-31']);
-                _gaq.push(['_trackPageview']);
-                (function() {
-                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-                })();
-            </script>
-                                                                                                                
-<link rel="shortcut icon" href="http://img.requs.org/logo-128x128.png"/>
-                                            <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
-        <script>
-            $(document).ready(
-                function() {
-                    $(".menu-button").click(
-                        function() {
-                            if ($("#here-goes-menu").attr("class") == "menu-off") {
-                                $("#menu").clone().attr("class", "mobile-menu").appendTo("#here-goes-menu");
-                                $("#here-goes-menu").attr("class", "menu-on");
-                            } else {
-                                $(".mobile-menu").hide();
-                                $("#here-goes-menu").attr("class", "menu-off");
-                            }
-                        }
-                    );
-                }
-            );
-        </script>
-    </head>
-    <body>
-                <section class="page" itemscope="" itemtype="http://schema.org/BlogPosting">
-            <nav class="menu-section" role="navigation">
-                <ul class="menu" id="menu">
-                                                                                    <li>
-                            Overview
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="index.html" title="Introduction">Introduction</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="syntax.html" title="Requs Syntax">Requs Syntax</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="https://github.com/teamed/requs/releases" title="Release History">Release History</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Features
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="feature-types.html" title="Types and Slots">Types and Slots</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="feature-attributes.html" title="Attributes and Seals">Attributes and Seals</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="feature-nfrs.html" title="Non-Functional Requirements">Non-Functional Requirements</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Examples
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="example-facebook.html" title="Facebook SRS">Facebook SRS</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Modules
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="requs-core/index.html" title="requs-core">requs-core</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="requs-exec/index.html" title="requs-exec">requs-exec</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="requs-demo/index.html" title="requs-demo">requs-demo</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="requs-maven-plugin/index.html" title="requs-maven-plugin">requs-maven-plugin</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                            <li>
-                            Project Documentation
-                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="project-info.html" title="Project Information">Project Information</a>
-        </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <ul>
-                                                                                                    <li >
-                            <span>                        <a href="integration.html" title="Continuous Integration">Continuous Integration</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="dependencies.html" title="Dependencies">Dependencies</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="issue-tracking.html" title="Issue Tracking">Issue Tracking</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="license.html" title="Project License">Project License</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="mail-lists.html" title="Mailing Lists">Mailing Lists</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="plugins.html" title="Project Plugins">Project Plugins</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="team-list.html" title="Project Team">Project Team</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li  class='active' >
-                            <span>                        <a href="source-repository.html" title="Source Repository">Source Repository</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="project-summary.html" title="Project Summary">Project Summary</a>
-        </span>
-                                                                                                                                                                <ul>
-                                                                    </ul>
-                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                                                                                                        <li >
-                            <span>                        <a href="project-reports.html" title="Project Reports">Project Reports</a>
-        </span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </li>
-                                                                                        </ul>
-                                                    </li>
-                                    </ul>
-            </nav>
-            <div class="right-side">
-                <main role="main">
-                    <div class="content">
-                        <header>
-                            <i class="menu-button fa fa-align-justify"></i>
-                            <div class="logo">
-                                <a href="./"
-                                    title=" logo ">
-                                    <img src="http://img.requs.org/logo-128x128.png"
-                                        alt="requs"
-                                                                                    width="64"
-                                                                                                                            height="64"
-                                                                                itemprop="image"
-                                    />
-                                </a>
-                            </div>
-                            <div class="date">
-                                <div class="date-numbers">
-                                    <strong itemprop="version">1.11</strong>
-                                    
-                                    <time itemprop="datePublished" datetime="2014-06-15T10:55:41Z">
-                                        
-                                        15-Jun-2014
-                                    </time>
-                                </div>
-                                                                                                    <div>
-                                        <iframe src="http://ghbtns.com/github-btn.html?user=teamed&amp;repo=requs&amp;type=watch&amp;count=true&amp;size=large"
-                                            style="border-width:0px;overflow:hidden;width:170px;height:30px;">
-                                        </iframe>
-                                    </div>
-                                                            </div>
-                            <div id="here-goes-menu" class="menu-off"></div>
-                        </header>
-                        <article role="article" itemprop="articleBody">
-                            <div class="section">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Generated by Apache Maven Doxia Site Renderer 1.4 at 2014-08-20 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>requs - Source Repository</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+    <meta name="Date-Revision-yyyymmdd" content="20140820" />
+    <meta http-equiv="Content-Language" content="en" />
+        
+        </head>
+  <body class="composite">
+    <div id="banner">
+                    <div id="bannerLeft">
+                requs
+                </div>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+            
+                    
+                <div class="xleft">
+        <span id="publishDate">Last Published: 2014-08-20</span>
+                  &nbsp;| <span id="projectVersion">Version: 1.14.1</span>
+                      </div>
+            <div class="xright">                    <a href="./" title="requs">requs</a>
+              
+                    
+      </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+             
+                    
+                                <h5>Parent Project</h5>
+                  <ul>
+                  <li class="none">
+                          <a href="../parent.jcabi.com/index.html" title="parent">parent</a>
+            </li>
+          </ul>
+                       <h5>Modules</h5>
+                  <ul>
+                  <li class="none">
+                          <a href="requs-core/index.html" title="requs-core">requs-core</a>
+            </li>
+                  <li class="none">
+                          <a href="requs-exec/index.html" title="requs-exec">requs-exec</a>
+            </li>
+                  <li class="none">
+                          <a href="requs-demo/index.html" title="requs-demo">requs-demo</a>
+            </li>
+                  <li class="none">
+                          <a href="requs-maven-plugin/index.html" title="requs-maven-plugin">requs-maven-plugin</a>
+            </li>
+          </ul>
+                       <h5>Project Documentation</h5>
+                  <ul>
+                                                                                                                                                                                                                              <li class="expanded">
+                          <a href="project-info.html" title="Project Information">Project Information</a>
+                    <ul>
+                      <li class="none">
+                          <a href="integration.html" title="Continuous Integration">Continuous Integration</a>
+            </li>
+                      <li class="none">
+                          <a href="dependencies.html" title="Dependencies">Dependencies</a>
+            </li>
+                      <li class="none">
+                          <a href="issue-tracking.html" title="Issue Tracking">Issue Tracking</a>
+            </li>
+                      <li class="none">
+                          <a href="license.html" title="Project License">Project License</a>
+            </li>
+                      <li class="none">
+                          <a href="mail-lists.html" title="Mailing Lists">Mailing Lists</a>
+            </li>
+                      <li class="none">
+                          <a href="plugins.html" title="Project Plugins">Project Plugins</a>
+            </li>
+                      <li class="none">
+                          <a href="team-list.html" title="Project Team">Project Team</a>
+            </li>
+                      <li class="none">
+            <strong>Source Repository</strong>
+          </li>
+                      <li class="none">
+                          <a href="project-summary.html" title="Project Summary">Project Summary</a>
+            </li>
+              </ul>
+        </li>
+                                                                                                                                            <li class="collapsed">
+                          <a href="project-reports.html" title="Project Reports">Project Reports</a>
+                  </li>
+          </ul>
+                             <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
+        <img class="poweredBy" alt="Built by Maven" src="./images/logos/maven-feather.png" />
+      </a>
+                   
+                    
+            </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section">
 <h2>Overview<a name="Overview"></a></h2><a name="Overview"></a>
 <p>This project uses <a class="externalLink" href="http://git-scm.com/">GIT</a> to manage its source code. Instructions on GIT use can be found at <a class="externalLink" href="http://git-scm.com/documentation">http://git-scm.com/documentation</a>.</p></div>
 <div class="section">
@@ -253,19 +131,21 @@
 <div class="section">
 <h2>Access from behind a firewall<a name="Access_from_behind_a_firewall"></a></h2><a name="Access_from_behind_a_firewall"></a>
 <p>Refer to the documentation of the SCM used for more information about access behind a firewall.</p></div>
-                            <img class="maven-logo" src="//img.jcabi.com/built-by-maven.png" alt="built by maven"/>
-                        </article>
-                    </div>
-                </main>
-                <footer class="legal-notes">
-                    <div>
-                        Copyright &#169;
-                                                                            2009-2014
-                                            </div>
-                    <div>requs.org, All Rights Reserved.</div>
-                    <div><a href="http://maven.apache.org/privacy-policy.html">Privacy Policy</a>.</div>
-                </footer>
-            </div>
-        </section>
-    </body>
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">
+              Copyright &#169;                    2009-2014
+                        <a href="http://www.requs.org">requs.org</a>.
+            All Rights Reserved.      
+                    
+                  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
 </html>

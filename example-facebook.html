@@ -12,9 +12,29 @@
     <link rel="stylesheet" href="/css/layout.css?"/>
     <link rel="canonical" href="//www.requs.org/example-facebook.html" />
     <title>Facebook SRS, Example</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.js"></script>
+    <script style="text/javascript">
+      $(
+        function() {
+          $('h2').each(
+            function (idx, element) {
+              var $element = $(element), id = $element.attr('id');
+              if (id) {
+                $element.append(
+                  $('<a/>').addClass('link').attr('href', '#' + id).html('&#182;')
+                );
+              }
+            }
+          );
+        }
+      );
+    </script>
   </head>
   <body>
-    <a href="https://github.com/teamed/requs"><img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    <a href="https://github.com/teamed/requs">
+      <img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px"
+        src="http://img.jcabi.com/fork-me.svg" alt="Fork me on GitHub">
+    </a>
     <div class="wrapper">
       <header class="header">
         <p>
@@ -22,15 +42,20 @@
             <img src="//img.requs.org/logo.svg" class="logo" alt="logo"/>
           </a>
         </p>
+        <p>
+          <a href="http://www.teamed.io">
+            <img src="http://img.teamed.io/btn.svg" alt="made by teamed.io"/>
+          </a>
+        </p>
       </header>
       <h1>Facebook SRS, Example</h1>
       <p>This is an example SRS of Facebook, in
 <a href="./syntax.html">Requs syntax</a>:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">User</span><span class="err"> </span><span class="k">is</span><span class="err"> </span><span class="s">&quot;a human being&quot;</span><span class="err">.</span>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">User</span><span class="err"> </span><span class="k">is</span><span class="err"> </span><span class="s">&quot;a human being&quot;</span><span class="err">.</span>
 <span class="n">User</span><span class="err"> has</span><span class="p">:</span><span class="err"> email</span><span class="p">,</span><span class="err"> password</span><span class="p">,</span><span class="err"> name.</span>
 
-<span class="err">UC1 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) socializes</span><span class="p">:</span>
+<span class="n">UC1</span><span class="err"> </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) socializes</span><span class="p">:</span>
 <span class="err">  1. </span><span class="k">The</span><span class="err"> user identifies himself</span><span class="p">;</span>
 <span class="err">  2. </span><span class="k">The</span><span class="err"> user invites </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user)</span><span class="p">;</span>
 <span class="err">  3. </span><span class="k">The</span><span class="err"> user accepts </span><span class="n">Invitation</span><span class="err"> (an invite)</span><span class="p">;</span>
@@ -46,39 +71,39 @@
 <span class="n">Invitation</span><span class="err"> </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="s">&quot;request to become a friend sent from one user to another&quot;</span><span class="err">.</span>
 <span class="n">Invitation</span><span class="err"> has</span><span class="p">:</span><span class="err"> author </span><span class="k">as</span><span class="err"> </span><span class="n">User</span><span class="err"> </span><span class="k">and</span><span class="err"> friend </span><span class="k">as</span><span class="err"> </span><span class="n">User</span><span class="err">.</span>
 
-<span class="err">UC2 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> identifies himself</span><span class="p">:</span>
+<span class="n">UC2</span><span class="err"> </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> identifies himself</span><span class="p">:</span>
 <span class="err">  </span><span class="s">&quot;The user enters his email and password, if he has them. Otherwise,</span>
 <span class="s">  he registers in the system first, providing his email, full</span>
 <span class="s">  name, password, and phone number&quot;</span><span class="err">.</span>
 
-<span class="err">UC3 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) invites </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> friend)</span><span class="p">:</span>
+<span class="n">UC3</span><span class="err"> </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) invites </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> friend)</span><span class="p">:</span>
 <span class="err">  1. </span><span class="k">The</span><span class="err"> user </span><span class="o">reads</span><span class="err"> </span><span class="k">the</span><span class="err"> friend</span>
 <span class="err">    </span><span class="s">&quot;finding him in a list of all registered users&quot;</span><span class="p">;</span>
 <span class="err">  2. </span><span class="k">The</span><span class="err"> user </span><span class="o">creates</span><span class="err"> </span><span class="k">the</span><span class="err"> invitation.</span>
-<span class="err">UC3/2 </span><span class="k">when</span><span class="err"> </span><span class="s">&quot;the user is banned by the friend&quot;</span><span class="p">:</span>
+<span class="n">UC3</span><span class="err">/2 </span><span class="k">when</span><span class="err"> </span><span class="s">&quot;the user is banned by the friend&quot;</span><span class="p">:</span>
 <span class="err">  1. </span><span class="n">Fail</span><span class="err"> </span><span class="k">as</span><span class="err"> </span><span class="s">&quot;the user is not allowed to invite this friend&quot;</span><span class="err">.</span>
 
-<span class="err">UC4 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) accepts </span><span class="n">Invitation</span><span class="err"> (an invitation)</span><span class="p">:</span>
+<span class="n">UC4</span><span class="err"> </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) accepts </span><span class="n">Invitation</span><span class="err"> (an invitation)</span><span class="p">:</span>
 <span class="err">  1. </span><span class="k">The</span><span class="err"> user </span><span class="o">reads</span><span class="err"> </span><span class="k">the</span><span class="err"> invitation</span><span class="p">;</span>
 <span class="err">  2. </span><span class="s">&quot;User bans a requester, making impossible any more invitations from him&quot;</span><span class="p">;</span>
 <span class="err">  3. </span><span class="k">The</span><span class="err"> user </span><span class="o">updates</span><span class="err"> </span><span class="k">the</span><span class="err"> invitation</span>
 <span class="err">    </span><span class="s">&quot;adding the friend to his list of friends&quot;</span><span class="err">.</span>
 
-<span class="err">UC5 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) publishes </span><span class="n">StatusUpdate</span><span class="err"> (an update)</span><span class="p">:</span>
+<span class="n">UC5</span><span class="err"> </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) publishes </span><span class="n">StatusUpdate</span><span class="err"> (an update)</span><span class="p">:</span>
 <span class="err">  1. </span><span class="k">The</span><span class="err"> user </span><span class="o">creates</span><span class="err"> </span><span class="k">the</span><span class="err"> update</span>
 <span class="err">    </span><span class="s">&quot;and it automatically gets added to his Timeline&quot;</span><span class="err">.</span>
 
-<span class="err">UC6 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) scrolls </span><span class="n">Timeline</span><span class="p">:</span>
+<span class="n">UC6</span><span class="err"> </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) scrolls </span><span class="n">Timeline</span><span class="p">:</span>
 <span class="err">  </span><span class="s">&quot;The user lists all status updates created by his</span>
 <span class="s">  friends in a reversive chronological order&quot;</span><span class="err">.</span>
 
-<span class="err">UC1/UI </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;be responsive, adapting itself to the width of device&quot;</span><span class="err">.</span>
+<span class="n">UC1</span><span class="err">/</span><span class="n">UI</span><span class="err"> </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;be responsive, adapting itself to the width of device&quot;</span><span class="err">.</span>
 
-<span class="err">UC1/PERF </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;guarantee a delivery of any HTTP response</span>
+<span class="n">UC1</span><span class="err">/</span><span class="n">PERF</span><span class="err"> </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;guarantee a delivery of any HTTP response</span>
 <span class="s">  in less than 1 second, with standard equipment and normal</span>
 <span class="s">  load of the system&quot;</span><span class="err">.</span>
 
-<span class="err">UC1/SCALE </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;handle any number (up to a billion) of users without</span>
+<span class="n">UC1</span><span class="err">/</span><span class="n">SCALE</span><span class="err"> </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;handle any number (up to a billion) of users without</span>
 <span class="s">  performance degrading&quot;</span><span class="err">.</span></code></pre></div>
 
       <footer class="footer">

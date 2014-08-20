@@ -102,7 +102,7 @@
 <a class="jxr_linenumber" name="L94" href="#L94">94</a>              );
 <a class="jxr_linenumber" name="L95" href="#L95">95</a>              <strong class="jxr_keyword">return</strong> Json.createObjectBuilder()
 <a class="jxr_linenumber" name="L96" href="#L96">96</a>                  .add(<span class="jxr_string">"spec"</span>, xml.nodes(<span class="jxr_string">"/spec"</span>).get(0).toString())
-<a class="jxr_linenumber" name="L97" href="#L97">97</a>                  .add(<span class="jxr_string">"html"</span>, xsl.transform(xml).toString())
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>                  .add(<span class="jxr_string">"html"</span>, xsl.applyTo(xml))
 <a class="jxr_linenumber" name="L98" href="#L98">98</a>                  .build().toString();
 <a class="jxr_linenumber" name="L99" href="#L99">99</a>          <em class="jxr_comment">// @checkstyle IllegalCatchCheck (1 line)</em>
 <a class="jxr_linenumber" name="L100" href="#L100">100</a>         } <strong class="jxr_keyword">catch</strong> (<strong class="jxr_keyword">final</strong> RuntimeException ex) {

@@ -12,14 +12,39 @@
     <link rel="stylesheet" href="/css/layout.css?"/>
     <link rel="canonical" href="//www.requs.org/syntax.html" />
     <title>Requs Syntax</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.js"></script>
+    <script style="text/javascript">
+      $(
+        function() {
+          $('h2').each(
+            function (idx, element) {
+              var $element = $(element), id = $element.attr('id');
+              if (id) {
+                $element.append(
+                  $('<a/>').addClass('link').attr('href', '#' + id).html('&#182;')
+                );
+              }
+            }
+          );
+        }
+      );
+    </script>
   </head>
   <body>
-    <a href="https://github.com/teamed/requs"><img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    <a href="https://github.com/teamed/requs">
+      <img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px"
+        src="http://img.jcabi.com/fork-me.svg" alt="Fork me on GitHub">
+    </a>
     <div class="wrapper">
       <header class="header">
         <p>
           <a href="/">
             <img src="//img.requs.org/logo.svg" class="logo" alt="logo"/>
+          </a>
+        </p>
+        <p>
+          <a href="http://www.teamed.io">
+            <img src="http://img.teamed.io/btn.svg" alt="made by teamed.io"/>
           </a>
         </p>
       </header>
@@ -29,8 +54,8 @@ and <em>methods</em> (aka &quot;use cases&quot;). For example, there are two typ
 (<code>Visitor</code> and <code>Image</code>) and one
 use case (<code>UC3.2</code>) defined in the snippet:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">Visitor</span><span class="err"> </span><span class="k">is</span><span class="err"> </span><span class="s">&quot;an originator of HTTP request&quot;</span><span class="err">.</span>
-<span class="err">UC3.2 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) </span><span class="o">deletes</span><span class="err"> photos</span><span class="p">:</span>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">Visitor</span><span class="err"> </span><span class="k">is</span><span class="err"> </span><span class="s">&quot;an originator of HTTP request&quot;</span><span class="err">.</span>
+<span class="n">UC3</span><span class="err">.2 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) </span><span class="o">deletes</span><span class="err"> photos</span><span class="p">:</span>
 <span class="err">  </span><span class="s">&quot;we will define it later...&quot;</span><span class="err">.</span>
 <span class="n">Image</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span><span class="err"> content</span><span class="p">,</span><span class="err"> name</span><span class="p">,</span><span class="err"> </span><span class="k">and</span><span class="err"> size.</span></code></pre></div>
 
@@ -43,7 +68,7 @@ during formal Requs analysis.</p>
 
 <p>Let&#39;s consider a bigger example of a type <code>Image</code>:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">Image</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">Image</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span>
 <span class="err">content </span><span class="k">as</span><span class="err"> </span><span class="n">File</span><span class="err"> </span><span class="s">&quot;a binary content as defined by ISO-15948&quot;</span><span class="p">,</span>
 <span class="err">name </span><span class="k">as</span><span class="err"> </span><span class="s">&quot;a unique alpha-numeric name of the image&quot;</span><span class="p">,</span>
 <span class="err">size </span><span class="k">as</span><span class="err"> </span><span class="s">&quot;the total number of bytes in PNG content&quot;</span><span class="err">.</span></code></pre></div>
@@ -57,7 +82,7 @@ An <code>as</code> keyword separates the name of the slot and its invariant.</p>
 Comma, semicolon and preposition <code>and</code> can replace each other.
 For example, the following declarations are semantically equivalent:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">Image</span><span class="err"> </span><span class="k">needs</span><span class="p">:</span><span class="err"> content </span><span class="k">and</span><span class="err"> name </span><span class="k">and</span><span class="err"> size.</span>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">Image</span><span class="err"> </span><span class="k">needs</span><span class="p">:</span><span class="err"> content </span><span class="k">and</span><span class="err"> name </span><span class="k">and</span><span class="err"> size.</span>
 <span class="n">Image</span><span class="err"> </span><span class="k">needs</span><span class="p">:</span><span class="err"> content</span><span class="p">,</span><span class="err"> name</span><span class="p">,</span><span class="err"> size.</span>
 <span class="n">Image</span><span class="err"> </span><span class="k">needs</span><span class="p">:</span><span class="err"> content</span><span class="p">;</span><span class="err"> name</span><span class="p">;</span><span class="err"> </span><span class="k">and</span><span class="err"> size.</span></code></pre></div>
 
@@ -92,15 +117,15 @@ names, while <code>imagefile</code> is just an English word.</p>
 a step-by-step explanation of interaction between instances of types
 (so called <em>objects</em>), for example:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="err">UC8.1 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) shares </span><span class="n">Image</span><span class="err"> </span><span class="k">with</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> friend)</span><span class="p">:</span>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">UC8</span><span class="err">.1 </span><span class="k">where</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> user) shares </span><span class="n">Image</span><span class="err"> </span><span class="k">with</span><span class="err"> </span><span class="n">User</span><span class="err"> (</span><span class="k">a</span><span class="err"> friend)</span><span class="p">:</span>
 <span class="err">1. </span><span class="k">The</span><span class="err"> user </span><span class="o">creates</span><span class="err"> </span><span class="n">Image</span><span class="err"> (</span><span class="k">a</span><span class="err"> photo)</span><span class="p">;</span>
 <span class="err">2. </span><span class="k">The</span><span class="err"> user </span><span class="o">updates</span><span class="err"> </span><span class="k">the</span><span class="err"> friend </span><span class="s">&quot;selecting one of his contacts&quot;</span><span class="p">;</span>
 <span class="err">3. </span><span class="k">The</span><span class="err"> photo converts </span><span class="s">&quot;to the right PNG format, 600x600 maximum&quot;</span><span class="p">;</span>
 <span class="err">4. </span><span class="k">The</span><span class="err"> friend receives email </span><span class="k">using</span><span class="err"> </span><span class="n">SmtpServer</span><span class="err"> (</span><span class="k">a</span><span class="err"> server)</span><span class="p">;</span>
 <span class="err">5. </span><span class="k">The</span><span class="err"> friend </span><span class="o">reads</span><span class="err"> </span><span class="k">the</span><span class="err"> photo </span><span class="s">&quot;in his own web page&quot;</span><span class="err">.</span>
-<span class="err">UC8.1/1 </span><span class="k">when</span><span class="err"> </span><span class="s">&quot;the user exceeds the maximum possible number of photos&quot;</span><span class="p">:</span>
+<span class="n">UC8</span><span class="err">.1/1 </span><span class="k">when</span><span class="err"> </span><span class="s">&quot;the user exceeds the maximum possible number of photos&quot;</span><span class="p">:</span>
 <span class="err">1. </span><span class="n">Fail</span><span class="err"> </span><span class="k">as</span><span class="err"> </span><span class="s">&quot;photos limit exceeded&quot;</span><span class="err">.</span>
-<span class="err">UC8.1/3 </span><span class="k">when</span><span class="err"> </span><span class="s">&quot;invalid format&quot;</span><span class="p">:</span>
+<span class="n">UC8</span><span class="err">.1/3 </span><span class="k">when</span><span class="err"> </span><span class="s">&quot;invalid format&quot;</span><span class="p">:</span>
 <span class="err">1. </span><span class="s">&quot;We notify user about the problem&quot;</span><span class="p">;</span>
 <span class="err">2. </span><span class="n">Fail</span><span class="err"> </span><span class="k">as</span><span class="err"> </span><span class="s">&quot;can&#39;t convert photo&quot;</span><span class="err">.</span></code></pre></div>
 
@@ -112,7 +137,7 @@ concept is very similar to
 <a href="http://en.wikipedia.org/wiki/Signature_(computer_science)">function signature</a>
 in programming. The signature of this use case is:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">User</span><span class="err"> shares </span><span class="n">Image</span><span class="err"> </span><span class="k">with</span><span class="err"> </span><span class="n">User</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">User</span><span class="err"> shares </span><span class="n">Image</span><span class="err"> </span><span class="k">with</span><span class="err"> </span><span class="n">User</span></code></pre></div>
 
 <p>In order to include this use case into another one we should use this
 signature, filling it with particular objects. Objects start with
@@ -135,12 +160,12 @@ provided and pass them the objects we have.</p>
 <p>In the example above, one of the use case steps
 mentioned <code>using</code> operator:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="k">The</span><span class="err"> friend receives email </span><span class="k">using</span><span class="err"> </span><span class="n">SmtpServer</span><span class="err"> (</span><span class="k">a</span><span class="err"> server).</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="k">The</span><span class="err"> friend receives email </span><span class="k">using</span><span class="err"> </span><span class="n">SmtpServer</span><span class="err"> (</span><span class="k">a</span><span class="err"> server).</span></code></pre></div>
 
 <p>This is similar to sending arguments to a method. In this line
 we&#39;re calling a method &quot;receives&quot; on &quot;the friend&quot; object like this:</p>
 
-<div class="highlight"><pre><code class="java"><span class="n">friend</span><span class="o">.</span><span class="na">receives_email</span><span class="o">(</span><span class="n">smtp_server</span><span class="o">);</span></code></pre></div>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">friend</span><span class="o">.</span><span class="na">receives_email</span><span class="o">(</span><span class="n">smtp_server</span><span class="o">);</span></code></pre></div>
 
 <p>Instead of <code>using</code> you can use <code>of</code> or <code>with</code>. These three
 keywords are reserved and can&#39;t be used as English words.</p>
@@ -155,7 +180,7 @@ which are defined in the system, even if the document is
 empty. The elementary use cases are
 (<a href="http://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> requirements pattern):</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">Something</span><span class="err"> </span><span class="o">creates</span><span class="err"> something</span>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">Something</span><span class="err"> </span><span class="o">creates</span><span class="err"> something</span>
 <span class="n">Something</span><span class="err"> </span><span class="o">reads</span><span class="err"> something</span>
 <span class="n">Something</span><span class="err"> </span><span class="o">updates</span><span class="err"> something</span>
 <span class="n">Something</span><span class="err"> </span><span class="o">deletes</span><span class="err"> something</span></code></pre></div>
@@ -193,7 +218,7 @@ in object-oriented languages.</p>
 the entire scope definition document. The metric is called
 &quot;<em>scope ambiguity</em>&quot; and is calculated like:</p>
 
-<div class="highlight"><pre><code class="text">A = S / (S + M)</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">A = S / (S + M)</code></pre></div>
 
 <p><code>S</code> stands for a total number of all informal flows,
 and <code>M</code> is a total number of CRUD-manipulators.
@@ -206,7 +231,7 @@ the task of a system analyst is to move <code>A</code> from 1 to 0.</p>
 <p>A slot may have an &quot;arity&quot;, determined by a suffix attached to its name. There
 are four possible options:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">User</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span><span class="err"> name</span><span class="p">,</span><span class="err"> address-s</span><span class="p">,</span><span class="err"> </span><span class="k">and</span><span class="err"> photo-s?.</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">User</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span><span class="err"> name</span><span class="p">,</span><span class="err"> address-s</span><span class="p">,</span><span class="err"> </span><span class="k">and</span><span class="err"> photo-s?.</span></code></pre></div>
 
 <p><code>-s</code> means &quot;one or many&quot; or <code>1..*</code> in UML.</p>
 
@@ -221,13 +246,13 @@ means aggregation. In order to make a slot with a type of
 composition nature, you should use an exclamation mark after
 the type:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">User</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span><span class="err"> photo-s? </span><span class="k">as</span><span class="err"> </span><span class="n">File</span><span class="err">!.</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">User</span><span class="err"> </span><span class="k">includes</span><span class="p">:</span><span class="err"> photo-s? </span><span class="k">as</span><span class="err"> </span><span class="n">File</span><span class="err">!.</span></code></pre></div>
 
 <h2 id="actors">Actors</h2>
 
 <p>Any type can be an actor, just say so in your spec:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">User</span><span class="err"> </span><span class="k">is</span><span class="err"> an actor.</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">User</span><span class="err"> </span><span class="k">is</span><span class="err"> an </span><span class="k">actor</span><span class="err">.</span></code></pre></div>
 
 <p>Only actors can perform <code>read</code> operations.</p>
 
@@ -237,13 +262,13 @@ the type:</p>
 may be used, for example, for
 <a href="http://en.wikipedia.org/wiki/Requirement_prioritization">requirements prioritization</a>.</p>
 
-<div class="highlight"><pre><code class="requs"><span class="p">:</span><span class="err">UC3.2 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span>
-<span class="p">:</span><span class="err">UC8 </span><span class="k">is</span><span class="err"> delivered.</span>
-<span class="p">:</span><span class="err">UC2 </span><span class="k">is</span><span class="err"> specified.</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="p">:</span><span class="n">UC3</span><span class="err">.2 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span>
+<span class="p">:</span><span class="n">UC8</span><span class="err"> </span><span class="k">is</span><span class="err"> delivered.</span>
+<span class="p">:</span><span class="n">UC2</span><span class="err"> </span><span class="k">is</span><span class="err"> specified.</span></code></pre></div>
 
 <p>You can &quot;seal&quot; your statement with a hash code:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="err">af63e2</span><span class="p">:</span><span class="err">UC3.2 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="err">af63e2</span><span class="p">:</span><span class="n">UC3</span><span class="err">.2 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span></code></pre></div>
 
 <p>This hash code <code>af63e2</code> is calculated from the content of <code>UC3.2</code>.
 If the content is changed, this statement becomes invalid and the entire
@@ -256,8 +281,8 @@ document can&#39;t be compiled any more.</p>
 <p>To any use case you can add a number of non-functional requirements (NFR),
 in the following format:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="err">UC3.2/MTBF </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;be 5 minutes on a standard equipment&quot;</span><span class="err">.</span>
-<span class="err">UC7/PERF </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;be less than 500 msec per request&quot;</span><span class="err">.</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">UC3</span><span class="err">.2/</span><span class="n">MTBF</span><span class="err"> </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;be 5 minutes on a standard equipment&quot;</span><span class="err">.</span>
+<span class="n">UC7</span><span class="err">/</span><span class="n">PERF</span><span class="err"> </span><span class="k">must</span><span class="err"> </span><span class="s">&quot;be less than 500 msec per request&quot;</span><span class="err">.</span></code></pre></div>
 
 <p>After the name of the use case you put a forward slash and then
 a mnemonic name of a non-functional requirement. Then, you put
@@ -271,7 +296,7 @@ a mnemonic name of a non-functional requirement. Then, you put
 example, Vision, Business Case, wireframes, UI mockups, tables,
 research results, supplementary tables, etc. The syntax is simple:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="n">Vision</span><span class="p">:</span><span class="err"> &quot;&quot;</span><span class="s">&quot;</span>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">Vision</span><span class="p">:</span><span class="err"> &quot;&quot;</span><span class="s">&quot;</span>
 <span class="s">Any text you wish, in Markdown format.</span>
 <span class="s">&quot;</span><span class="err">&quot;&quot;.</span></code></pre></div>
 

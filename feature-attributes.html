@@ -12,14 +12,39 @@
     <link rel="stylesheet" href="/css/layout.css?"/>
     <link rel="canonical" href="//www.requs.org/feature-attributes.html" />
     <title>Requirement Attributes and Seals</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.js"></script>
+    <script style="text/javascript">
+      $(
+        function() {
+          $('h2').each(
+            function (idx, element) {
+              var $element = $(element), id = $element.attr('id');
+              if (id) {
+                $element.append(
+                  $('<a/>').addClass('link').attr('href', '#' + id).html('&#182;')
+                );
+              }
+            }
+          );
+        }
+      );
+    </script>
   </head>
   <body>
-    <a href="https://github.com/teamed/requs"><img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    <a href="https://github.com/teamed/requs">
+      <img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px"
+        src="http://img.jcabi.com/fork-me.svg" alt="Fork me on GitHub">
+    </a>
     <div class="wrapper">
       <header class="header">
         <p>
           <a href="/">
             <img src="//img.requs.org/logo.svg" class="logo" alt="logo"/>
+          </a>
+        </p>
+        <p>
+          <a href="http://www.teamed.io">
+            <img src="http://img.teamed.io/btn.svg" alt="made by teamed.io"/>
           </a>
         </p>
       </header>
@@ -28,8 +53,8 @@
 is a small-caps English word, without spaces or numbers inside.
 For example:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="p">:</span><span class="err">UC3.2 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span>
-<span class="p">:</span><span class="err">UC8 </span><span class="k">is</span><span class="err"> delivered.</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="p">:</span><span class="n">UC3</span><span class="err">.2 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span>
+<span class="p">:</span><span class="n">UC8</span><span class="err"> </span><span class="k">is</span><span class="err"> delivered.</span></code></pre></div>
 
 <p>In this example, <code>must</code> is an attribute of <code>UC3.2</code> and
 <code>delivered</code> is an attribute of <code>UC8</code>.</p>
@@ -66,8 +91,8 @@ case content.</p>
 
 <p>For example, these two use cases will have two different seals:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="err">UC3 </span><span class="k">where</span><span class="err"> nothing happens</span><span class="p">:</span><span class="err"> </span><span class="s">&quot;tbd&quot;</span><span class="err">.</span>
-<span class="err">UC3 </span><span class="k">where</span><span class="err"> nothing really happens</span><span class="p">:</span><span class="err"> </span><span class="s">&quot;tbd&quot;</span><span class="err">.</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="n">UC3</span><span class="err"> </span><span class="k">where</span><span class="err"> nothing happens</span><span class="p">:</span><span class="err"> </span><span class="s">&quot;tbd&quot;</span><span class="err">.</span>
+<span class="n">UC3</span><span class="err"> </span><span class="k">where</span><span class="err"> nothing really happens</span><span class="p">:</span><span class="err"> </span><span class="s">&quot;tbd&quot;</span><span class="err">.</span></code></pre></div>
 
 <p>Their signatures are different, that&#39;s why their seals are also different.</p>
 
@@ -75,11 +100,11 @@ case content.</p>
 a random seal (for example, <code>ffffff</code>)
 and run <code>mvn requs:compile</code>:</p>
 
-<div class="highlight"><pre><code class="requs"><span class="err">ffffff</span><span class="p">:</span><span class="err">UC3 </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span></code></pre></div>
+<div class="highlight"><pre><code class="language-requs" data-lang="requs"><span class="err">ffffff</span><span class="p">:</span><span class="n">UC3</span><span class="err"> </span><span class="k">is</span><span class="err"> </span><span class="k">a</span><span class="err"> </span><span class="k">must</span><span class="err">.</span></code></pre></div>
 
 <p>You will get an error message, similar to this:</p>
 
-<div class="highlight"><pre><code class="text">[ERROR] 17:0 Seal &quot;2edb8f&quot; at the method UC3 doesn&#39;t match &quot;ffffff&quot; at the attribute &quot;must&quot;</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">[ERROR] 17:0 Seal &quot;2edb8f&quot; at the method UC3 doesn&#39;t match &quot;ffffff&quot; at the attribute &quot;must&quot;</code></pre></div>
 
 <p>The message means that Requs engine is expecting <code>2edb8f</code> as
 a seal for all <code>UC3</code> attributes. We set it to <code>ffffff</code> --- this

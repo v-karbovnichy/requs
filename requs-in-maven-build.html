@@ -12,9 +12,29 @@
     <link rel="stylesheet" href="/css/layout.css?"/>
     <link rel="canonical" href="//www.requs.org/requs-in-maven-build.html" />
     <title>Requirements Compilation in Maven Build</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.0.0.js"></script>
+    <script style="text/javascript">
+      $(
+        function() {
+          $('h2').each(
+            function (idx, element) {
+              var $element = $(element), id = $element.attr('id');
+              if (id) {
+                $element.append(
+                  $('<a/>').addClass('link').attr('href', '#' + id).html('&#182;')
+                );
+              }
+            }
+          );
+        }
+      );
+    </script>
   </head>
   <body>
-    <a href="https://github.com/teamed/requs"><img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+    <a href="https://github.com/teamed/requs">
+      <img style="position:absolute;top:0;right:0;border:0;width:100px;height:100px"
+        src="http://img.jcabi.com/fork-me.svg" alt="Fork me on GitHub">
+    </a>
     <div class="wrapper">
       <header class="header">
         <p>
@@ -22,12 +42,17 @@
             <img src="//img.requs.org/logo.svg" class="logo" alt="logo"/>
           </a>
         </p>
+        <p>
+          <a href="http://www.teamed.io">
+            <img src="http://img.teamed.io/btn.svg" alt="made by teamed.io"/>
+          </a>
+        </p>
       </header>
       <h1>Requirements Compilation in Maven Build</h1>
       <p>Add this plugin to your Maven build
 (get their versions from <a href="http://search.maven.org/">Maven Central</a>):</p>
 
-<div class="highlight"><pre><code class="xml"><span class="nt">&lt;build&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;build&gt;</span>
   <span class="nt">&lt;plugins&gt;</span>
     <span class="nt">&lt;plugin&gt;</span>
       <span class="nt">&lt;groupId&gt;</span>org.requs<span class="nt">&lt;/groupId&gt;</span>
@@ -76,7 +101,7 @@ in all sub-directories.</p>
 <p>You can add extra configuration parameters to be passed
 into Requs compiler, using <code>options</code> element:</p>
 
-<div class="highlight"><pre><code class="xml"><span class="nt">&lt;build&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;build&gt;</span>
   <span class="nt">&lt;plugins&gt;</span>
     <span class="nt">&lt;plugin&gt;</span>
       <span class="nt">&lt;groupId&gt;</span>org.requs<span class="nt">&lt;/groupId&gt;</span>
